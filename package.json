@@ -1,4 +1,6 @@
 {
+  "scripts": {"start": "sass --watch Index.scss style.css"},
+
   "dependencies": {
     "bootstrap": "^5.2.2"
   }
