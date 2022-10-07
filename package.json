@@ -1,5 +1,5 @@
 {
-  "scripts": {"start": "sass --watch Index.scss style.css"},
+  "scripts": {"start": "sass --watch index.scss style.css"},
 
   "dependencies": {
     "bootstrap": "^5.2.2"
