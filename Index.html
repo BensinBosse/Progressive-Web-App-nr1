@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css" />
-    <link href="manifest.json" rel="manifest" />
-    <link href="/images/icons/icon-192x192.png" rel="apple-touch-icon" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="##53dd6c"/>
 
-    <title>Document</title>
+<head>
+    <meta charset="UTF-8"/>
+
+    <!--all meta här under definerar storleken på enheten och hur content ska visas (Ett försök till att göra appen responsiv)-->
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
+    <meta name="description" content="Spyfall Clone i en PWA"/>
+    <meta name="theme-color" content="#53dd6c"/>
+
+    <!--All meta här gör så att Apple enheter ska kunna fungera, och det sätter fullscreen med en status bar som får våran tema färg(tror jag), finns mer att läsa på "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html"-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="KennethFall" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#53dd6c" />
+
+    <!--Pekar på ikonen vi ska använda-->
+    <link rel="icon" href="/src/images/icons/icon-192x192.png"/>
+
+    <!--Pekar på vilket manifest vi ska använda och vår CSS-->
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="stylesheet" href="src/style.css"/>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>KennethFall</title>
 </head>
 <body>
     <h1>Hello World</h1>
-    <script src="index.js"></script>
+    <!--Ett trött försök till att få sw.js att fungera-->
+    <script>
+    const RegisterServiceWorker = async () =>{
+        if ("ServiceWorker" in navigator) {
+            try {
+                const registration = await navigator.serviceWorker.register("/sw.js", {scope:"/",});
+                if (registration.installing) {
+                    console.log("sw installing");
+                }
+                else if (registration.waiting) {
+                    console.log("sw installed");
+                }
+                else if (registration.active) {
+                    console.log("sw active");
+                }
+            }
+            catch(error) {
+                console.error(`reg fail här får du ett error din jävel ${error}`);
+            }
+        }
+    };
+    </script>
+    <script src="src/index.js"></script>
 </body>
 </html>
+
+<!--klockan är 21:35 och nu ger jag upp-->
