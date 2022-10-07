@@ -1,0 +1,5 @@
+Vi kommer att göra en app-version av sällskapsspelet SpyFall. Det finns redan en native app, men vi har valt att inte titta på den
+utan istället göra våran egen version utan för mycket input eller influens från den redan existerande appen.
+
+Målet med appen är att såklart göra den funktionell och relativt snygg, men framför för oss som utvecklare att bli bekanta med
+verktygen som används.
