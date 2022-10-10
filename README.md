@@ -11,3 +11,8 @@ steg 4: testa köra kommandot "npm run start". Då ska en task startas :)
 
 
 i värsta fall så finns en bra dokumentation här "https://docs.pwabuilder.com/#/starter/quick-start"
+
+moduler som kenneth tycker är fina:
+https://squoosh.app/
+https://snyk.io/
+https://ngrok.com/
