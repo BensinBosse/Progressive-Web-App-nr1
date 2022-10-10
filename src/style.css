@@ -1,5 +1,21 @@
+body {
+  display: block;
+  background-color: #333333;
+}
+
 h1 {
   color: #edafb8;
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.bigPlayerBox {
+  display: flex;
+  background-color: #edafb8;
+  height: 50px;
+  width: 50px;
+
 }
 
 /*# sourceMappingURL=style.css.map */

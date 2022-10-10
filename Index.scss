@@ -5,6 +5,21 @@ $light-green: #7ae582ff;
 $light-pink: #edafb8ff;
 $opera-mauve: #af7595ff;
 
+
+body{
+    display: block;
+    background-color: $jet;
+}
+
 h1{
-    color: $light-pink;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.bigPlayerBox{
+    display: flex;
+    background-color: $light-pink;
+    height: 50px;
+    width: 50px;
 }
