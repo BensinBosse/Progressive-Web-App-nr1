@@ -1,3 +1,1 @@
-console.log("innan if sats")
-
-console.log("hej world")
+console.log("index.js laddat")
