@@ -2,7 +2,7 @@
   "scripts": {
     "dev:scss": "sass --watch index.scss src/style.css",
     "dev:server": "live-server",
-    "run-all":"npm-run-all --parallel dev:*"
+    "all":"npm-run-all --parallel dev:*"
   },
   "dependencies": {
     "bootstrap": "^5.2.2"
