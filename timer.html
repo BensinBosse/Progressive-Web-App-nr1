@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/timer.css">
-    <title>Document</title>
+    <title>Timer</title>
 </head>
 <body>
-    
-    <h1>Timer</h1>
 
+        <div class="body-wrap">
+            <h1>Set the time you wish to play for!</h1>
+            <button class="btn" id="increase-btn">&#9650</button>
+            <div class="timer-wrap">
+                <p id="timer-minutes" class="timer-el"></p>
+                <p id="colon" class="timer-el">:</p>
+                <p id="timer-seconds" class="timer-el">00</p>
+            </div>
+            <button class="btn" id="decrease-btn">&#9660</button>
+            <button id="next-btn" class="btn" onclick="window.location.href = '/ingame.html';">NEXT</button>
+        </div>
+<script src="js/timer.js"></script>
 </body>
 </html>
