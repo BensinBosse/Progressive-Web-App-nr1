@@ -1,9 +1,9 @@
-$jet: #333333ff;
-$aquamarine: #9fffcbff;
 $pale-cerulean: #95b8d1ff;
-$light-green: #7ae582ff;
-$light-pink: #edafb8ff;
 $opera-mauve: #af7595ff;
+$aquamarine: #9fffcbff;
+$jet: #333333ff;
+$dark-purple: #462749ff;
+$snow: #f7f0f0ff;
 
 
 body{
@@ -16,7 +16,7 @@ h1{
     display: block;
     width: 300px;
     margin: 0 auto;
-    color: $light-pink;
+    color: $pale-cerulean;
 }
 
 .playerinput{
@@ -33,5 +33,18 @@ h1{
     display: flex;
     flex-direction: column;
     width: 70%;
-    background-color: $light-green;
+    background-color: $opera-mauve;
+}
+
+.btn{
+    width: fit-content;
+    font-size: 3em;
+    text-shadow: 0px 2px 5px black;
+    margin: 0 auto;
+    color: $snow;
+    background-color: $pale-cerulean;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px black;
 }
