@@ -10,11 +10,21 @@ h1 {
   color: #edafb8;
 }
 
-.bigPlayerBox {
+.playerinput {
+  height: 2em;
+  width: 13em;
+  margin: 5px auto;
+  color: #333333;
+  background-color: #9fffcb;
+  border: none;
+}
+
+#playerbox {
+  margin: 30px auto;
   display: flex;
-  background-color: #edafb8;
-  height: 50px;
-  width: 50px;
+  flex-direction: column;
+  width: 70%;
+  background-color: #7ae582;
 }
 
 /*# sourceMappingURL=general.css.map */

@@ -18,9 +18,19 @@ h1{
     color: $light-pink;
 }
 
-.bigPlayerBox{
+.playerinput{
+    height: 2em;
+    width: 13em;
+    margin:5px auto;
+    color:$jet;
+    background-color: $aquamarine;
+    border:none;
+}
+
+#playerbox{
+    margin:30px auto;
     display: flex;
-    background-color: $light-pink;
-    height: 50px;
-    width: 50px;
+    flex-direction: column;
+    width: 70%;
+    background-color: $light-green;
 }
