@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev:scss": "sass --watch index.scss src/style.css",
+    "dev:scss": "sass --watch scss/general.scss css/general.css",
     "dev:server": "live-server",
     "all":"npm-run-all --parallel dev:*"
   },
