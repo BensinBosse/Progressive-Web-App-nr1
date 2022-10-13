@@ -4,10 +4,10 @@ body {
 }
 
 h1 {
-  color: #edafb8;
   display: block;
   width: 300px;
   margin: 0 auto;
+  color: #edafb8;
 }
 
 .bigPlayerBox {
@@ -15,7 +15,6 @@ h1 {
   background-color: #edafb8;
   height: 50px;
   width: 50px;
-
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=general.css.map */
