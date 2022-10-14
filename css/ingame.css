@@ -1,0 +1,26 @@
+h1 {
+  position: absolute;
+  color: #9fffcb;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+  justify-content: center;
+  width: fit-content;
+}
+
+.nav-btns {
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -90%);
+  position: fixed;
+  display: flex;
+  width: 100vw;
+}
+
+#prev-btn {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=ingame.css.map */
