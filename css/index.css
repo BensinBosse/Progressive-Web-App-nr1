@@ -1,0 +1,10 @@
+#next-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/*# sourceMappingURL=index.css.map */
