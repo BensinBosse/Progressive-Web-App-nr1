@@ -53,3 +53,41 @@ h1{
     cursor: pointer;
     box-shadow: 0px 2px 10px black;
 }
+
+#prev-btn, #end-btn {
+    background-color: $opera-mauve;
+}
+
+.nav-buttons {
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+    position: fixed;
+    display: flex;
+    width: 80vw;
+    margin-top: 2rem;
+    flex-direction: row;
+    width: 160vw;
+    
+}
+
+.nav-buttons button {
+    font-size: 1.5rem;
+    width: 10rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+
+// @media-queries vvv
+@media screen and (max-width: 950px) and (max-height: 450px){
+    .nav-buttons {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 850px) {   
+    .nav-buttons {
+        width: 140vw;
+    }
+}
