@@ -5,6 +5,7 @@ let timerMinutes = document.getElementById("timer-minutes")
 let timerValue = 10
 timerMinutes.innerHTML = timerValue
 
+
 decreaseBtn.addEventListener("click", function decreaseTime(){
     if (timerValue > 1){
     timerValue -= 1
@@ -18,3 +19,4 @@ increaseBtn.addEventListener("click", function increaseTime(){
     timerMinutes.innerHTML = timerValue
     }
 })
+
