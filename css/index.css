@@ -28,6 +28,11 @@ h1 {
   font-weight: bold;
 }
 
+::placeholder {
+  color: #333333;
+  opacity: 0.8;
+}
+
 .player-input,
 #player-box {
   border-radius: 6px;
