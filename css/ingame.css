@@ -1,0 +1,19 @@
+h1 {
+  position: absolute;
+  color: #9fffcb;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+  justify-content: center;
+  width: fit-content;
+}
+
+#next-btn {
+  visibility: hidden;
+}
+
+#end-btn {
+  width: max-content;
+}
+
+/*# sourceMappingURL=ingame.css.map */
