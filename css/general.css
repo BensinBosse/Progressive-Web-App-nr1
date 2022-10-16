@@ -10,27 +10,14 @@ body {
 }
 
 h1 {
-  display: block;
-  width: 300px;
-  margin: 0 auto;
-  color: #95b8d1;
-}
-
-.playerinput {
-  height: 2em;
-  width: 13em;
-  margin: 5px auto;
-  color: #333333;
-  background-color: #9fffcb;
-  border: none;
-}
-
-#playerbox {
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  background-color: #af7595;
+  position: absolute;
+  width: max-content;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 3em;
+  color: #f7f0f0;
+  text-decoration: underline;
+  text-decoration-color: #95b8d1;
 }
 
 .btn {
