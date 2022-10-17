@@ -17,28 +17,15 @@ body{
     text-shadow: 0px 0px 10px black;
 }
 
-h1{
-    display: block;
-    width: 300px;
-    margin: 0 auto;
-    color: $pale-cerulean;
-}
-
-.playerinput{
-    height: 2em;
-    width: 13em;
-    margin:5px auto;
-    color:$jet;
-    background-color: $aquamarine;
-    border:none;
-}
-
-#playerbox{
-    margin:30px auto;
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    background-color: $opera-mauve;
+h1 {
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3em;
+    color: $snow;
+    text-decoration: underline;
+    text-decoration-color: $pale-cerulean;
 }
 
 .btn{

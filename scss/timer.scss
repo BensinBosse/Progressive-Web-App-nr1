@@ -5,17 +5,9 @@ $jet: #333333ff;
 $dark-purple: #462749ff;
 $snow: #f7f0f0ff;
 
+
 h1 {
-    position: absolute;
-    width: max-content;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 3em;
     margin-top: -6rem;
-    color: $snow;
-    text-decoration: underline;
-    text-decoration-color: $pale-cerulean;
 }
 
 .body-wrap {
