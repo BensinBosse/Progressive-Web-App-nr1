@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="shortcut icon" href="#" />
 
-<head>
-
-    <link rel="shortcut icon" href="#">
-    
-
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
 
     <!--all meta här under definerar storleken på enheten och hur content ska visas (Ett försök till att göra appen responsiv)-->
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
-    <meta name="description" content="Spyfall Clone i en PWA"/>
-    <meta name="theme-color" content="#53dd6c"/>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="description" content="Spyfall Clone i en PWA" />
+    <meta name="theme-color" content="#53dd6c" />
 
     <!--All meta här gör så att Apple enheter ska kunna fungera, och det sätter fullscreen med en status bar som får våran tema färg(tror jag), finns mer att läsa på "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html"-->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -19,58 +19,81 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#53dd6c" />
     <link href="/src/images/icons/icon-192x192.png" rel="apple-touch-icon" />
 
-
     <!--Pekar på ikonen vi ska använda-->
 
     <!--Pekar på vilket manifest vi ska använda och vår CSS-->
-    <link rel="manifest" href="manifest.json"/>
-    <link rel="stylesheet" href="css/general.css"/>
-    <link rel="stylesheet" href="css/index.css">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>KennethFall</title>
-</head>
-<body>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
-    <div class="h1tag">
-        <h1>KennethFall: The Game!</h1>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>KennethFall</title>
+  </head>
+  <body>
+    <div class="title-block">
+      <h1>KennethFall: The Game!</h1>
     </div>
-        
+
     <main>
-        <button class="btn" id="fewer-btn">
-            <img src="src/images/indexminus.svg" alt="">
-        </button>
-        <form id="player-box">
-            <input type="text" class="player-input" id="input-1" placeholder="Player 1 name">
-            <input type="text" class="player-input" id="input-2" placeholder="Player 2 name">
-            <input type="text" class="player-input" id="input-3" placeholder="Player 3 name">
-        </form>
-        <button class="btn" id="more-btn" onclick="addPlayer()">
-            <img src="src\images\indexplus.svg" alt="">
-        </button>
+      <button class="btn" id="fewer-btn">
+        <img src="src/images/indexminus.svg" alt="" />
+      </button>
+      <form id="player-box">
+        <input
+          type="text"
+          class="player-input"
+          id="input-1"
+          placeholder="Player 1 name"
+        />
+        <input
+          type="text"
+          class="player-input"
+          id="input-2"
+          placeholder="Player 2 name"
+        />
+        <input
+          type="text"
+          class="player-input"
+          id="input-3"
+          placeholder="Player 3 name"
+        />
+      </form>
+      <button class="btn" id="more-btn" onclick="addPlayer()">
+        <img src="src\images\indexplus.svg" alt="" />
+      </button>
     </main>
-    
+
     <div class="nav-buttons">
-        <button id="prev-btn" class="btn" onclick="window.location.href = '/index.html';">GO BACK</button>
-        <button id="next-btn" class="btn" onclick="window.location.href = '/timer.html';">NEXT</button>
+      <button
+        id="prev-btn"
+        class="btn"
+        onclick="window.location.href = '/index.html';"
+      >
+        GO BACK
+      </button>
+      <button
+        id="next-btn"
+        class="btn"
+        onclick="window.location.href = '/timer.html';"
+      >
+        NEXT
+      </button>
     </div>
-    
-    
+
     <!--Ett trött försök till att få sw.js att fungera-->
     <script>
-    if('serviceWorker' in navigator){
-        try{
-            navigator.serviceWorker.register('src/serviceWorker.js')
+      if ("serviceWorker" in navigator) {
+        try {
+          navigator.serviceWorker.register("src/serviceWorker.js");
 
-            console.log("SW Registered")
-        } catch(error){
-            console.log("SW Registration fail")
+          console.log("SW Registered");
+        } catch (error) {
+          console.log("SW Registration fail");
         }
-
-    }
+      }
     </script>
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>
 
 <!--klockan är 21:35 och nu ger jag upp-->

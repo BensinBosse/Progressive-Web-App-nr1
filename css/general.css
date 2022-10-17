@@ -9,10 +9,9 @@ body {
 }
 
 h1 {
-  position: absolute;
-  width: max-content;
-  left: 50%;
-  transform: translate(-50%);
+  text-align: center;
+  margin: 2rem auto 0 auto;
+  width: 13em;
   font-size: 3em;
   color: #f7f0f0;
   text-decoration: underline;
@@ -27,11 +26,12 @@ h1 {
   color: #f7f0f0;
   background-color: #95b8d1;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.4em;
   cursor: pointer;
 }
 
-#prev-btn, #end-btn {
+#prev-btn,
+#end-btn {
   background-color: #af7595;
 }
 

@@ -1,5 +1,5 @@
 h1 {
-  font-size: 6em;
+  font-size: 3.3em;
 }
 
 #prev-btn {
@@ -7,19 +7,19 @@ h1 {
 }
 
 #player-box {
-  margin: 0;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  background-color: #af7595;
+  background-color: hotpink;
 }
 
 .player-input {
   font-size: 2em;
   height: 2em;
   width: 75%;
-  margin: 5px auto;
+  margin: 1rem auto;
   color: #333333;
   background-color: #9fffcb;
   border: none;
@@ -39,39 +39,19 @@ h1 {
 }
 
 main {
-  position: fixed;
   display: flex;
   flex-direction: row;
-  width: 50vw;
-  height: 50vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 60vh;
+  margin: 0 auto;
 }
 
 main .btn {
-  position: fixed;
+  width: 2em;
+  height: 2em;
   aspect-ratio: 1/1;
-  width: 1em;
+  margin: auto;
   border-radius: 50%;
-  top: 35%;
-  z-index: 1;
-  color: #333333;
-  font-size: 6rem;
-  line-height: 1em;
-  display: flex;
-  padding: 0;
-  align-content: center;
-}
-
-#fewer-btn {
-  left: -20%;
-  transform: translate(20%);
-}
-
-#more-btn {
-  left: 120%;
-  transform: translate(-120%);
 }
 
 img {
