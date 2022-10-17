@@ -2,29 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="93.051926mm"
+   height="92.903168mm"
+   viewBox="0 0 93.051926 92.903168"
    version="1.1"
    id="svg5"
-   inkscape:export-filename="bitmap.svg"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     showgrid="false" />
   <defs
      id="defs2">
     <rect
@@ -35,7 +19,6 @@
        id="rect63" />
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter1590"
        x="-0.3273811"
        y="-0.32824948"
@@ -104,18 +87,17 @@
     </filter>
   </defs>
   <g
-     inkscape:label="Lager 1"
-     inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-62.733175,-9.5520436)">
     <text
        xml:space="preserve"
-       transform="matrix(1.7433293,0,0,1.7433293,-24.72524,-245.97707)"
+       transform="matrix(1.7433293,0,0,1.7433293,-0.60341285,-337.18773)"
        id="text61"
        style="font-size:85.3333px;white-space:pre;shape-inside:url(#rect63);fill:#666666;fill-opacity:1;filter:url(#filter1590)"><tspan
          x="44.160156"
          y="252.71915"
-         id="tspan2166"><tspan
+         id="tspan371"><tspan
            style="font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, '"
-           id="tspan2164">+</tspan></tspan></text>
+           id="tspan369">+</tspan></tspan></text>
   </g>
 </svg>

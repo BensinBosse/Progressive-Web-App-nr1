@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="147.21402mm"
+   height="73.360184mm"
+   viewBox="0 0 147.21402 73.360184"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="indexminus.svg"
+   inkscape:export-xdpi="50"
+   inkscape:export-ydpi="50"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2">
+    <rect
+       x="135.32915"
+       y="273.50732"
+       width="59.829723"
+       height="99.716217"
+       id="rect186" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter408"
+       x="-0.24849407"
+       y="-0.99798429"
+       width="1.4969882"
+       height="2.9959686">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood398" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite400" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur402" />
+      <feOffset
+         dx="2.77556e-17"
+         dy="0"
+         result="offset"
+         id="feOffset404" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite406" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Lager 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-29.429183,-74.281874)">
+    <text
+       xml:space="preserve"
+       transform="matrix(4.6282087,0,0,4.6282087,-585.10781,-1410.5473)"
+       id="text184"
+       style="font-size:85.3333px;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, ';white-space:pre;shape-inside:url(#rect186);fill:#666666;filter:url(#filter408)"><tspan
+         x="135.33008"
+         y="355.28556"
+         id="tspan502">-</tspan></text>
+  </g>
+</svg>
