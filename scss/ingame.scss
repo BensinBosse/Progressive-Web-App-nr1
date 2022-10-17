@@ -5,23 +5,44 @@ $jet: #333333ff;
 $dark-purple: #462749ff;
 $snow: #f7f0f0ff;
 
-h1 {
-    position: absolute;
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 70vw;
+    height: 80vh;
+    margin: 1em auto;
+    align-content: space-around;
+    
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $pale-cerulean;
+    color: $jet;
+    font-size: 2em;
+    aspect-ratio: 1 / 1;
+    width: 6em;
+    text-align: center;
+    margin: 5px auto;
+    cursor: pointer;
+    border-radius: 50%;
+    //box-shadow: 0px 2px 10px black;
+}
+
+p {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    width: max-content;
+    font-size: 8em;
     color: $aquamarine;
-    left: 50%;
-    top: 10%;
-    transform: translate(-50%, -10%);
-    justify-content: center;
-    width: fit-content;
+    font-weight: bold;
 }
 
-.map-textbox{
-    width:20%;
-    margin:0 auto;
-    background-color: $dark-purple;
-    justify-content: center;
-}
-
+//navigation bara
 #next-btn {
     visibility: hidden;
 }

@@ -7,12 +7,28 @@
     <title>Ingame</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/ingame.css">
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
-    <h1>Ingame</h1>
-    <div class="map-textbox">
-    <p id="map-text">hej</p>
-    </div>
+    <main>
+
+        <!--Player-buttons-->
+        <div id="grid-container">
+            <div class="grid-item"id="ja" onclick="my()">MMMMMM</div>
+            <div class="grid-item">Player 2</div>
+            <div class="grid-item">Player 3</div>  
+            <!-- <div class="grid-item">Player 4</div>
+            <div class="grid-item">Player 5</div>
+            <div class="grid-item">Player 6</div>
+            <div class="grid-item">Player 7</div> -->
+
+          </div>
+
+          <!--Timer-->
+          <p>10:00</p>
+    </main>
+
+    <!--Navigation-->
     <div class="nav-buttons">
         <button id="end-btn" class="btn" onclick="window.location.href = '/index.html';">END GAME</button>
         <button id="next-btn" class="btn" onclick="window.location.href = '/timer.html';">NEXT</button>
