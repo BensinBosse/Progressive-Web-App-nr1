@@ -52,13 +52,16 @@ main {
 main .btn {
   position: fixed;
   aspect-ratio: 1/1;
-  width: 1.2em;
+  width: 1em;
   border-radius: 50%;
   top: 35%;
   z-index: 1;
   color: #333333;
   font-size: 6rem;
   line-height: 1em;
+  display: flex;
+  padding: 0;
+  align-content: center;
 }
 
 #fewer-btn {
@@ -72,7 +75,9 @@ main .btn {
 }
 
 img {
-  max-width: 2em;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 1.5em;
 }
 
 /*# sourceMappingURL=index.css.map */
