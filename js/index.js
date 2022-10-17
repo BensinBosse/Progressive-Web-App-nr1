@@ -1,12 +1,12 @@
 console.log("index.js laddat")
 
-let playerInputEl = document.getElementsByClassName("player-input")
-let placeholderEl = playerInput.placeholder
-let inputIdArr = []
+let players=[];
+let playerCount = document.getElementsByClassName("player-input").length;
+let playerCountString = "input-"+playerCount;
+let playerInput = document.getElementById(playerCountString);
+console.log(playerCountString);
+console.log(playerInput);
 
-for (i = 0; i < playerInputEl.length; i++) {
-    //Vet inte vad jag håller på med alls längre jag har
-    //TAPPAT DET HELT
-    //mvh
-}
+    
+
 
