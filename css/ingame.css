@@ -1,18 +1,35 @@
-h1 {
-  position: absolute;
-  color: #9fffcb;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%, -10%);
-  justify-content: center;
-  width: fit-content;
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 70vw;
+  height: 80vh;
+  margin: 1em auto 0 auto;
+  align-content: space-around;
 }
 
-.map-textbox {
-  width: 20%;
-  margin: 0 auto;
-  background-color: #462749;
+.grid-item {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  background-color: #95b8d1;
+  color: #333333;
+  font-size: 2em;
+  aspect-ratio: 1/1;
+  width: 6em;
+  text-align: center;
+  margin: 5px auto;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+p {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: max-content;
+  font-size: 8em;
+  color: #9fffcb;
+  font-weight: bold;
 }
 
 #next-btn {
