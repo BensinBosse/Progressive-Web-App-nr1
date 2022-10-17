@@ -15,6 +15,13 @@ h1 {
     width: fit-content;
 }
 
+.map-textbox{
+    width:20%;
+    margin:0 auto;
+    background-color: $dark-purple;
+    justify-content: center;
+}
+
 #next-btn {
     visibility: hidden;
 }

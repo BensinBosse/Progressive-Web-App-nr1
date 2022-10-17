@@ -8,6 +8,13 @@ h1 {
   width: fit-content;
 }
 
+.map-textbox {
+  width: 20%;
+  margin: 0 auto;
+  background-color: #462749;
+  justify-content: center;
+}
+
 #next-btn {
   visibility: hidden;
 }
