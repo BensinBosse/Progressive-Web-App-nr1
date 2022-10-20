@@ -3,7 +3,13 @@ let lastmap = null
 let randomMap = parseInt(Math.random() *maps.length);
 let map = maps[randomMap];
 
+knut();
 console.log(players);
+console.error(typeof(players))
+
+let playerArr = players.split(",");
+console.log(playerArr)
+
 
 
 

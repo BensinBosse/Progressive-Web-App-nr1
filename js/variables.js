@@ -7,6 +7,10 @@ function bengt(){
         players[i] = playerCountString;
         i++;
       }
+    localStorage.setItem("savedPlayers", players)
 };
 
-console.error(players);
+function knut(){
+    players = localStorage.getItem("savedPlayers")
+}
+
