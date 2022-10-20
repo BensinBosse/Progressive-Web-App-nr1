@@ -1,4 +1,12 @@
 
+knut();
+console.log(players);
+console.error(typeof(players))
+
+let playerArr = players.split(",");
+console.log(playerArr)
+
+
 
 
 // import Timer from "easytimer.js";

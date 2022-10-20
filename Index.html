@@ -35,7 +35,7 @@
     </div>
 
     <main>
-      <button class="btn" id="fewer-btn">
+      <button class="btn" id="fewer-btn" onclick="removePlayer()">
         <img src="src/images/indexminus.svg" alt="" />
       </button>
       <form id="player-box">
@@ -74,7 +74,7 @@
       <button
         id="next-btn"
         class="btn"
-        onclick="window.location.href = '/timer.html';"
+        onclick="nextPage()"
       >
         NEXT
       </button>
@@ -92,7 +92,9 @@
         }
       }
     </script>
+    <script src="js/variables.js"></script>
     <script src="js/index.js"></script>
+    
   </body>
 </html>
 
