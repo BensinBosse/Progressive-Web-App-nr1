@@ -2,7 +2,7 @@
   display: flex;
   width: 85vw;
   height: max-content;
-  margin: 0 auto;
+  margin: 20px auto;
   overflow-x: auto;
 }
 
@@ -38,6 +38,19 @@
 p {
   margin: 0;
   padding: 0;
+}
+
+.focus-class {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 40vw;
+  margin: 0;
+  z-index: 1;
+  box-shadow: 0px 2px 10px black;
 }
 
 .scroll-shadows {

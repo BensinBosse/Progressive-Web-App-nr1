@@ -5,8 +5,7 @@
     "all": "npm-run-all --parallel dev:*"
   },
   "dependencies": {
-    "bootstrap": "^5.2.2",
-    "easytimer.js": "^4.5.4"
+    "bootstrap": "^5.2.2"
   },
   "devDependencies": {
     "live-server": "^1.2.2",
