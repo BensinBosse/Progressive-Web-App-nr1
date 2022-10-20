@@ -91,8 +91,10 @@ function startTimer() {
     } else {
       seconds--;
       timerSeconds.textContent = seconds;
+
       if (seconds < 10 && seconds > 1) {
         colon.textContent = ":0";
+
       } else if (seconds == 0 && minutes == 0) {
         clearInterval(countdown);
         colon.innerHTML = "0:00";
@@ -101,6 +103,7 @@ function startTimer() {
         timerMinutes.textContent = "";
         finishedVar = true;
         colon.setAttribute("#hide");
+
       } else if (seconds == -1) {
         minutes--;
         timerMinutes.textContent = minutes;
@@ -122,6 +125,7 @@ wholeTimer.addEventListener("click", function () {
   if (onVar === false && finishedVar === false) {
     startTimer();
     onVar = true;
+
   } else if (onVar === true && finishedVar === false) {
     stopTimer();
     onVar = false;
@@ -135,6 +139,7 @@ let focusCard = "";
 playerContainer.onclick = function (event) {
   let target = event.target;
   console.log(target);
+
   if (inFocus === false && focusCard === "" && target !== playerContainer) {
     target.classList.add("focus-class");
     inFocus = true;
@@ -153,8 +158,8 @@ playerContainer.onclick = function (event) {
   else if (inFocus === true && focusCard === target) {
     target.classList.remove("focus-class");
     inFocus = false;
-    focusCard = "";
     target.firstElementChild.style.display = "none"
+    focusCard = "";
 
     //styling
     document.querySelector("body").style.backgroundColor = "#333333";
@@ -162,4 +167,17 @@ playerContainer.onclick = function (event) {
     playerContainer.style.overflow = "scroll";
     playerContainer.classList.add("scroll-shadows");
   }
-};
+
+  else if (inFocus === true && target === focusCard.firstElementChild) {
+    focusCard.classList.remove("focus-class");
+    inFocus = false;
+    focusCard.firstElementChild.style.display = "none"
+    focusCard = "";
+
+    //styling
+    document.querySelector("body").style.backgroundColor = "#333333";
+    playerContainer.style.backgroundColor = "#333333";
+    playerContainer.style.overflow = "scroll";
+    playerContainer.classList.add("scroll-shadows");
+  }
+}
