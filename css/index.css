@@ -12,7 +12,7 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  background-color: hotpink;
+  background-color: #af7595;
 }
 
 .player-input {

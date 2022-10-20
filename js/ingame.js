@@ -3,6 +3,8 @@ let lastmap = null
 let randomMap = parseInt(Math.random() *maps.length);
 let map = maps[randomMap];
 
+console.log(players[1]);
+
 
 
 // for (let i=0; i<10; ++i)
