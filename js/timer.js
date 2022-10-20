@@ -20,3 +20,8 @@ increaseBtn.addEventListener("click", function increaseTime(){
     }
 })
 
+//sparar och går till nästa
+nextBtn.addEventListener("click", function(){
+    saveTime()
+    window.location.href = "/ingame.html"
+})

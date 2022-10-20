@@ -73,9 +73,11 @@ colon.textContent = ":0";
 
 // !IMPORTANT KALLE!
 //Detta (minutes) ska vara den globala variabeln som sätt i timer.html,
-
 //bara för nu har jag satt den som 0 för test
-let minutes = 0
+
+//hämtar värdet och sätter minutes till savedTime
+getSavedTime()
+let minutes = savedTime
 timerMinutes.textContent = minutes
 let nextBtn = document.getElementById("next-btn")
 
