@@ -49,12 +49,6 @@ p {
     padding: 0;
 }
 
-//Ska fixa detta
-#colon::before {
-    color: $snow;
-    content: ":";
-}
-
 .scroll-shadows {
     //scrolling-settings
     overflow: auto;

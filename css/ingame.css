@@ -40,11 +40,6 @@ p {
   padding: 0;
 }
 
-#colon::before {
-  color: #f7f0f0;
-  content: ":";
-}
-
 .scroll-shadows {
   overflow: auto;
   background-image: linear-gradient(to right, #333333, #333333), linear-gradient(to right, #333333, #333333), linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));

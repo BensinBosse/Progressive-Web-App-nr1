@@ -37,7 +37,7 @@ h1 {
 }
 
 .timer-el:nth-child(2) {
-  color: #f7f0f0;
+  color: #9fffcb;
 }
 
 @media screen and (min-height: 650px) {

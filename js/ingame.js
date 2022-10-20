@@ -31,7 +31,7 @@ let seconds = 0;
 let countdown;
 
 timerSeconds.textContent = seconds
-colon.textContent = "0"
+colon.textContent = ":0"
 
 // !IMPORTANT KALLE!
 //Detta (minutes) ska vara den globala variabeln som sätt i timer.html,
@@ -48,7 +48,7 @@ function startTimer() {
             seconds--;
             timerSeconds.textContent = seconds;
             if (seconds <10 && seconds > 1) {
-                colon.textContent = "0"
+                colon.textContent = ":0"
             }
             else if(seconds == 0 && minutes == 0) {
                 clearInterval(countdown);
@@ -63,7 +63,7 @@ function startTimer() {
                 timerMinutes.textContent = minutes
                 seconds = 59
                 timerSeconds.textContent = seconds
-                colon.textContent = ""
+                colon.textContent = ":"
             }
         }  
     }, 1000);
