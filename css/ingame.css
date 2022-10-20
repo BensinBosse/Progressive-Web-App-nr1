@@ -23,7 +23,7 @@
   border-radius: 50%;
 }
 
-p {
+#timer {
   position: relative;
   display: flex;
   margin: 0 auto;
@@ -33,6 +33,11 @@ p {
   font-weight: bold;
   margin-top: 10px;
   cursor: pointer;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .scroll-shadows {
