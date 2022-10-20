@@ -44,7 +44,7 @@ function giveRandomOccupation() {
     player = document.getElementById("player" + (i2 + 1));
     var playerInfo = document.createElement("div");
 
-    playerInfo.setAttribute("id", "player");
+    playerInfo.setAttribute("class", "playerInfo");
 
     player.appendChild(playerInfo);
 
