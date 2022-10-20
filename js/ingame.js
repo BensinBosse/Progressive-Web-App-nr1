@@ -98,14 +98,22 @@ playerContainer.onclick = function(event) {
         inFocus = true
         focusCard = target
         console.log("Fokus är " + focusCard)
+        
+        //styling
+        document.querySelector("body").style.backgroundColor = "rgb(30, 30, 30)"
+        playerContainer.style.backgroundColor = "rgb(30, 30, 30)"
+        playerContainer.style.overflow = "hidden"
+        playerContainer.classList.remove("scroll-shadows")
     }
     else if (inFocus === true && focusCard === target){
         target.classList.remove("focus-class");
         inFocus = false
         focusCard = ""
+
+        //styling
+        document.querySelector("body").style.backgroundColor = "#333333"
+        playerContainer.style.backgroundColor = "#333333"
+        playerContainer.style.overflow = "scroll"
+        playerContainer.classList.add("scroll-shadows")
     }
 };
-
-if (inFocus === true) {
-    document.querySelector("body").style.background = "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)"
-}

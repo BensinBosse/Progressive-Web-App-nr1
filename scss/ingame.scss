@@ -5,6 +5,9 @@ $jet: #333333ff;
 $dark-purple: #462749ff;
 $snow: #f7f0f0ff;
 
+body {
+    transition: background-color 0.25s;
+}
 
 #container {
     display: flex;
@@ -12,6 +15,8 @@ $snow: #f7f0f0ff;
     height: max-content;
     margin: 20px auto;
     overflow-x: auto;
+    transition: background-color 0.25s;
+    //transition: shadow 0s;
 }
 
 .item {
@@ -30,6 +35,11 @@ $snow: #f7f0f0ff;
     cursor: pointer;
     border-radius: 50%;
     //box-shadow: 0px 2px 10px black;
+}
+
+//for users with a mouse cursor
+.item:hover {
+    box-shadow: 0px 2px 10px black;
 }
 
 #timer {
@@ -52,16 +62,19 @@ p {
 //is given to the player card clicked in game
 .focus-class {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40vw;
     height: 40vw;
     margin: 0;
-    z-index: 1;
+    z-index: 1000;
     box-shadow: 0px 2px 10px black;
-    //background-color: hotpink;
+    overflow: hidden;
+
+    //transition animation
+    transition: width 0.25s, height 0.25s, margin 0.25s, box-shadow 0.25s;
 }
 
 .scroll-shadows {
@@ -78,6 +91,7 @@ p {
     background-color: $jet;
     background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
     background-attachment: local, local, scroll, scroll;
+    transition: all 1s;
 }
 
 //navigation bara
