@@ -15,8 +15,8 @@
   font-size: 3.5vw;
   font-weight: 400;
   aspect-ratio: 1;
-  width: 20vw;
-  height: 20vw;
+  width: 17.5vw;
+  height: 17.5vw;
   text-align: center;
   margin: 25px;
   cursor: pointer;
@@ -28,9 +28,10 @@ p {
   display: flex;
   margin: 0 auto;
   width: max-content;
-  font-size: 20vw;
+  font-size: 15vw;
   color: #9fffcb;
   font-weight: bold;
+  margin-top: 10px;
   cursor: pointer;
 }
 
