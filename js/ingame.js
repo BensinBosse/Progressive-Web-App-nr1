@@ -37,17 +37,28 @@ giveRandomOccupation();
 
 function giveRandomOccupation() {
   i2 = 0;
+
+  let spyOccupied = false;
+  let randomOccupationNum = 0;
+
   let plats = maps[parseInt(Math.random() * 2)];
   let lastPlayer = document.getElementsByClassName("item");
   let player = document.getElementById("");
   while (i2 < lastPlayer.length) {
     player = document.getElementById("player" + (i2 + 1));
     var playerInfo = document.createElement("div");
+    if (spyOccupied == true) {
+      randomOccupationNum = parseInt(Math.random() * (plats.length + 1));
+      if (randomOccupationNum == 0) {
+        randomOccupationNum = randomOccupationNum + 1;
+      }
+    } else if (spyOccupied == false) {
+      console.log("hej");
+    }
+    console.error(plats.length);
+    console.log(randomOccupationNum);
 
     playerInfo.setAttribute("class", "playerInfo");
-    playerInfo.textContent = "HEJ"
-    playerInfo.style.display = "none"
-
     player.appendChild(playerInfo);
 
     console.log(player);
@@ -145,17 +156,15 @@ playerContainer.onclick = function (event) {
     inFocus = true;
     focusCard = target;
     console.log("Fokus är " + focusCard);
-    console.log(target)
-    target.firstElementChild.style.display = "block"
+    console.log(target);
+    target.firstElementChild.style.display = "block";
 
     //styling
     document.querySelector("body").style.backgroundColor = "rgb(30, 30, 30)";
     playerContainer.style.backgroundColor = "rgb(30, 30, 30)";
     playerContainer.style.overflow = "hidden";
     playerContainer.classList.remove("scroll-shadows");
-  }
-  
-  else if (inFocus === true && focusCard === target) {
+  } else if (inFocus === true && focusCard === target) {
     target.classList.remove("focus-class");
     inFocus = false;
     target.firstElementChild.style.display = "none"
@@ -173,6 +182,7 @@ playerContainer.onclick = function (event) {
     inFocus = false;
     focusCard.firstElementChild.style.display = "none"
     focusCard = "";
+
 
     //styling
     document.querySelector("body").style.backgroundColor = "#333333";
