@@ -65,7 +65,7 @@ const timerMinutes = document.getElementById("timer-minutes");
 const colon = document.getElementById("colon");
 let onVar = false;
 let finishedVar = false;
-let seconds = 0;
+let seconds = 1;
 let countdown;
 
 timerSeconds.textContent = seconds;
@@ -73,35 +73,42 @@ colon.textContent = ":0";
 
 // !IMPORTANT KALLE!
 //Detta (minutes) ska vara den globala variabeln som sätt i timer.html,
-//bara för nu har jag satt den som 2 för test
-let minutes = 2;
-timerMinutes.textContent = minutes;
+
+//bara för nu har jag satt den som 0 för test
+let minutes = 0
+timerMinutes.textContent = minutes
+let nextBtn = document.getElementById("next-btn")
 
 function startTimer() {
-  countdown = setInterval(function () {
-    if (onVar === false) {
-      return;
-    } else {
-      seconds--;
-      timerSeconds.textContent = seconds;
-      if (seconds < 10 && seconds > 1) {
-        colon.textContent = ":0";
-      } else if (seconds == 0 && minutes == 0) {
-        clearInterval(countdown);
-        colon.innerHTML = "TIME´S UP!";
-        timerSeconds.textContent = "";
-        timerMinutes.textContent = "";
-        finishedVar = true;
-        colon.setAttribute("#hide");
-      } else if (seconds == -1) {
-        minutes--;
-        timerMinutes.textContent = minutes;
-        seconds = 59;
-        timerSeconds.textContent = seconds;
-        colon.textContent = ":";
-      }
-    }
-  }, 1000);
+    countdown = setInterval(function(){
+        if(onVar === false){
+            return
+        }
+        else {
+            seconds--;
+            timerSeconds.textContent = seconds;
+            if (seconds <10 && seconds > 1) {
+                colon.textContent = ":0"
+            }
+            else if(seconds == 0 && minutes == 0) {
+                clearInterval(countdown);
+                colon.innerHTML = "0:00"
+                nextBtn.style.visibility = "visible"
+                timerSeconds.textContent = ""
+                timerMinutes.textContent = ""
+                finishedVar = true
+                colon.setAttribute("#hide")
+            }
+            else if (seconds == -1 ) {
+                minutes--
+                timerMinutes.textContent = minutes
+                seconds = 59
+                timerSeconds.textContent = seconds
+                colon.textContent = ":"
+            }
+        }  
+    }, 1000);
+
 }
 
 function stopTimer() {
@@ -121,24 +128,33 @@ wholeTimer.addEventListener("click", function () {
 });
 
 //function for putting clicked player card in focus
-let inFocus = false;
-let focusCard = "";
-playerContainer.onclick = function (event) {
-  let target = event.target;
-  console.log(target);
-  if (inFocus === false && focusCard === "" && target !== playerContainer) {
-    target.classList.add("focus-class");
-    inFocus = true;
-    focusCard = target;
-    console.log("Fokus är " + focusCard);
-  } else if (inFocus === true && focusCard === target) {
-    target.classList.remove("focus-class");
-    inFocus = false;
-    focusCard = "";
-  }
-};
 
-if (inFocus === true) {
-  document.querySelector("body").style.background =
-    "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)";
-}
+let inFocus = false
+let focusCard = ""
+playerContainer.onclick = function(event) {
+    let target = event.target;
+    console.log(target)
+    if (inFocus === false && focusCard === "" && target!== playerContainer){
+        target.classList.add("focus-class");
+        inFocus = true
+        focusCard = target
+        console.log("Fokus är " + focusCard)
+        
+        //styling
+        document.querySelector("body").style.backgroundColor = "rgb(30, 30, 30)"
+        playerContainer.style.backgroundColor = "rgb(30, 30, 30)"
+        playerContainer.style.overflow = "hidden"
+        playerContainer.classList.remove("scroll-shadows")
+    }
+    else if (inFocus === true && focusCard === target){
+        target.classList.remove("focus-class");
+        inFocus = false
+        focusCard = ""
+
+        //styling
+        document.querySelector("body").style.backgroundColor = "#333333"
+        playerContainer.style.backgroundColor = "#333333"
+        playerContainer.style.overflow = "scroll"
+        playerContainer.classList.add("scroll-shadows")
+    }
+};
