@@ -3,8 +3,6 @@ console.log("index.js laddat");
 let playerCount = document.getElementsByClassName("player-input").length;
 var playerCountString = "input-" + playerCount;
 console.log(playerCountString);
-let i = 0;
-
 
 function nextPage() {
   bengt();
@@ -13,8 +11,6 @@ function nextPage() {
 }
 
 function addPlayer() {
-  playerCount = document.getElementsByClassName("player-input").length;
-  console.log("clicked");
   var playerBox = document.getElementById("player-box");
   var input = document.createElement("input");
   input.type = "text";
@@ -25,8 +21,10 @@ function addPlayer() {
 
   input.setAttribute("placeholder", "Player " + (playerCount + 1) + " name");
 
-  console.log(playerCount);
   playerBox.appendChild(input);
+
+  playerCount = document.getElementsByClassName("player-input").length;
+  console.log(playerCount);
 }
 
 function removePlayer() {

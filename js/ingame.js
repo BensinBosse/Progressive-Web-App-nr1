@@ -1,13 +1,20 @@
-
 knut();
-console.log(players);
-console.error(typeof(players))
-
 let playerArr = players.split(",");
-console.log(playerArr)
+playerAmount = playerArr.length;
+let i2 = 0;
 
+while (i2 < playerAmount) {
+  i2++;
+  console.log("hej");
+  var playerContainer = document.getElementById("container");
+  var playerCard = document.createElement("div");
 
+  playerCard.setAttribute("class", "item");
+  playerCard.setAttribute("id", "player" + i2);
+  playerCard.insertAdjacentText("beforeend", playerArr[i2 - 1]);
 
+  playerContainer.appendChild(playerCard);
+}
 
 // import Timer from "easytimer.js";
 
@@ -37,4 +44,3 @@ console.log(playerArr)
 //     $('#timer').html('KABOOM!!');
 //     console.log("KLAR")
 // });
-
