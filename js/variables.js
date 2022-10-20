@@ -1,12 +1,13 @@
 var players = [];
 let i = 0;
+let newTimerValue = 0;
 
 function saveTime() {
   localStorage.setItem("savedTime", timerValue);
 }
 
 function getSavedTime() {
-  localStorage.getItem("savedTime");
+  newTimerValue = localStorage.getItem("savedTime");
 }
 
 function bengt() {
