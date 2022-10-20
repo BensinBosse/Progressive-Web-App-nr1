@@ -6,21 +6,22 @@ $dark-purple: #462749ff;
 $snow: #f7f0f0ff;
 
 
-#grid-container {
+#container {
     display: flex;
     width: 85vw;
     height: max-content;
     margin: 0 auto;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
-.grid-item {
+.item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: $pale-cerulean;
     color: $jet;
-    font-size: 2rem;
+    font-size: 3.5vw;
+    font-weight: 400;
     aspect-ratio: 1;
     width: 20vw;
     height: 20vw;
@@ -36,9 +37,26 @@ p {
     display: flex;
     margin: 0 auto;
     width: max-content;
-    font-size: 35vh;
+    font-size: 20vw;
     color: $aquamarine;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.scroll-shadows {
+    //scrolling-settings
+    overflow: auto;
+
+    //shadow-settings
+    background-image: linear-gradient(to right, $jet, $jet),
+    linear-gradient(to right, $jet, $jet),
+    linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-color: $jet;
+    background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+    background-attachment: local, local, scroll, scroll;
 }
 
 //navigation bara
