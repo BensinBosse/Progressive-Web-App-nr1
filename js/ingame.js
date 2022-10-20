@@ -3,7 +3,7 @@ let lastmap = null
 let randomMap = parseInt(Math.random() *maps.length);
 let map = maps[randomMap];
 
-console.log(players[1]);
+console.log(players);
 
 
 

@@ -7,15 +7,9 @@ let i = 0;
 
 
 function nextPage() {
-  while (i < playerCount) {
-    playerCountString = document.getElementById("input-" + (i + 1)).value;
-    console.log(playerCountString);
-    players[i] = playerCountString;
-    i++;
-  }
+  bengt();
   window.location.href = "/timer.html";
   console.log(players);
-  
 }
 
 function addPlayer() {
