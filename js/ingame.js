@@ -85,3 +85,9 @@ wholeTimer.addEventListener("click", function(){
         onVar = false
     }
 })
+
+//player card being in focus when clicked on
+playerCard.addEventListener("click", function(){
+    playerCard.classList.add('focus')
+    console.log(playerCard + "trycktes på")
+})

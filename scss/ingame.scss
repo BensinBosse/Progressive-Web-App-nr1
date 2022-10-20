@@ -49,6 +49,21 @@ p {
     padding: 0;
 }
 
+//is given to the player card clicked in game
+.focus {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 40vw;
+    margin: 0;
+    z-index: 1;
+    box-shadow: 0px 2px 10px black;
+
+}
+
 .scroll-shadows {
     //scrolling-settings
     overflow: auto;
