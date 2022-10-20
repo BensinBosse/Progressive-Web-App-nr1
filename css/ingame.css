@@ -2,7 +2,7 @@
   display: flex;
   width: 85vw;
   height: max-content;
-  margin: 0 auto;
+  margin: 20px auto;
   overflow-x: auto;
 }
 
@@ -38,6 +38,11 @@
 p {
   margin: 0;
   padding: 0;
+}
+
+#colon::before {
+  color: #f7f0f0;
+  content: ":";
 }
 
 .scroll-shadows {

@@ -10,7 +10,7 @@ $snow: #f7f0f0ff;
     display: flex;
     width: 85vw;
     height: max-content;
-    margin: 0 auto;
+    margin: 20px auto;
     overflow-x: auto;
 }
 
@@ -47,6 +47,12 @@ $snow: #f7f0f0ff;
 p {
     margin: 0;
     padding: 0;
+}
+
+//Ska fixa detta
+#colon::before {
+    color: $snow;
+    content: ":";
 }
 
 .scroll-shadows {

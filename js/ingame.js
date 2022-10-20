@@ -21,14 +21,23 @@ if (playerAmount < 5) {
 }
 
 //timer settings
-let wholeTimer = document.getElementById("timer")
-let timerSeconds = document.getElementById("timer-seconds")
-let timerMinutes = document.getElementById("timer-minutes")
-let colon = document.getElementById("colon")
+const wholeTimer = document.getElementById("timer")
+const timerSeconds = document.getElementById("timer-seconds")
+const timerMinutes = document.getElementById("timer-minutes")
+const colon = document.getElementById("colon")
 let onVar = false;
-finishedVar = false;
-var seconds = timerSeconds.textContent;
-var countdown;
+let finishedVar = false;
+let seconds = 0;
+let countdown;
+
+timerSeconds.textContent = seconds
+colon.textContent = "0"
+
+// !IMPORTANT KALLE!
+//Detta (minutes) ska vara den globala variabeln som sätt i timer.html,
+//bara för nu har jag satt den som 2 för test
+let minutes = 2
+timerMinutes.textContent = minutes
 
 function startTimer() {
     countdown = setInterval(function(){
@@ -38,20 +47,24 @@ function startTimer() {
         else {
             seconds--;
             timerSeconds.textContent = seconds;
-            if (seconds <10 && seconds > 0) {
-                colon.textContent = ":0"
+            if (seconds <10 && seconds > 1) {
+                colon.textContent = "0"
             }
-            else if (seconds > 9){
-                colon.textContent = ":"
-            }
-            else if(seconds == 0 && timerMinutes.textContent == "0") {
+            else if(seconds == 0 && minutes == 0) {
                 clearInterval(countdown);
-                colon.textContent = "MORSAN"
+                colon.innerHTML = "TIME´S UP!"
                 timerSeconds.textContent = ""
                 timerMinutes.textContent = ""
                 finishedVar = true
+                colon.setAttribute("#hide")
             }
-            
+            else if (seconds == -1 ) {
+                minutes--
+                timerMinutes.textContent = minutes
+                seconds = 59
+                timerSeconds.textContent = seconds
+                colon.textContent = ""
+            }
         }  
     }, 1000);
 }
