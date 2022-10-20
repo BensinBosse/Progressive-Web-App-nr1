@@ -1,10 +1,9 @@
 #grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: 70vw;
-  height: 80vh;
+  display: flex;
+  width: 85vw;
+  height: max-content;
   margin: 0 auto;
-  align-content: space-around;
+  overflow-x: scroll;
 }
 
 .grid-item {
@@ -13,11 +12,12 @@
   justify-content: center;
   background-color: #95b8d1;
   color: #333333;
-  font-size: 2em;
-  aspect-ratio: 1/1;
-  width: 6em;
+  font-size: 2rem;
+  aspect-ratio: 1;
+  width: 20vw;
+  height: 20vw;
   text-align: center;
-  margin: 5px auto;
+  margin: 25px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -27,7 +27,7 @@ p {
   display: flex;
   margin: 0 auto;
   width: max-content;
-  font-size: 8em;
+  font-size: 35vh;
   color: #9fffcb;
   font-weight: bold;
 }
