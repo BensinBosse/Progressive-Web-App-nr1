@@ -1,23 +1,24 @@
-#grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: 70vw;
-  height: 80vh;
-  margin: 1em auto 0 auto;
-  align-content: space-around;
+#container {
+  display: flex;
+  width: 85vw;
+  height: max-content;
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
-.grid-item {
+.item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #95b8d1;
   color: #333333;
-  font-size: 2em;
-  aspect-ratio: 1/1;
-  width: 6em;
+  font-size: 3.5vw;
+  font-weight: 400;
+  aspect-ratio: 1;
+  width: 17.5vw;
+  height: 17.5vw;
   text-align: center;
-  margin: 5px auto;
+  margin: 25px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -27,9 +28,21 @@ p {
   display: flex;
   margin: 0 auto;
   width: max-content;
-  font-size: 8em;
+  font-size: 15vw;
   color: #9fffcb;
   font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.scroll-shadows {
+  overflow: auto;
+  background-image: linear-gradient(to right, #333333, #333333), linear-gradient(to right, #333333, #333333), linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: #333333;
+  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  background-attachment: local, local, scroll, scroll;
 }
 
 #next-btn {
