@@ -1,35 +1,32 @@
-const maps = ["School", "Office", "McDonalds", "Grums", "din mor"];
-let lastmap = null
-let randomMap = parseInt(Math.random() *maps.length);
-let map = maps[randomMap];
 
 
 
-// for (let i=0; i<10; ++i)
-// {    
-//     randomMap = parseInt(Math.random() * maps.length)
-//     map = maps[randomMap]
-//     console.log("map",map)
-//     console.log("lastmap",lastmap)
-//     console.log("count",i)
+// import Timer from "easytimer.js";
 
-//     if (map != lastmap){
-//         document.getElementById("mapText").innerHTML = map;
-//         lastmap = map
-//         console.log("hoppas att ja inte ser detta")
-        
-//     }
-//     else{
-//         console.log("else")
-//     }
+// const timer = new Timer();
+// /*
+// const maps = ["School", "Office", "McDonalds", "Grums", "din mor"];
+// let lastmap = null
+// let randomMap = parseInt(Math.random() *maps.length);
+// let map = maps[randomMap];
+// */
+// let timerEl = document.getElementById("timer")
+// timerEl.addEventListener("click", function timerClick(){
+//     console.log("Timer klickad")
+//     //Här ska alltså timern startas
+// })
 
-// }
+// //Timer logic
+// Timer.start({countdown: true, startValues: {seconds: 3}});
 
+// $('#timer').html(Timer.getTimeValues().toString());
 
-let grid = document.getElementById("grid-container");
-let morePeople = 0
+// Timer.addEventListener('secondsUpdated', function (e) {
+//     $('#timer').html(Timer.getTimeValues().toString());
+// });
 
-if (morePeople === 1){
-console.log("Ja")
-    grid.style.gridTemplateColumns = "repeat(4, minmax(0, 1fr))";
-}
+// Timer.addEventListener('targetAchieved', function (e) {
+//     $('#timer').html('KABOOM!!');
+//     console.log("KLAR")
+// });
+
