@@ -1,16 +1,20 @@
-
 knut();
-console.log(players);
-console.error(typeof(players))
-
 let playerArr = players.split(",");
-console.log(playerArr)
+playerAmount = playerArr.length;
+let i2 = 0;
 
-// const maps = ["School", "Office", "McDonalds", "Grums", "din mor"];
-// let lastmap = null
-// let randomMap = parseInt(Math.random() *maps.length);
-// let map = maps[randomMap];
-// */
+while (i2 < playerAmount) {
+  i2++;
+  console.log("hej");
+  var playerContainer = document.getElementById("container");
+  var playerCard = document.createElement("div");
+
+  playerCard.setAttribute("class", "item");
+  playerCard.setAttribute("id", "player" + i2);
+  playerCard.insertAdjacentText("beforeend", playerArr[i2 - 1]);
+
+  playerContainer.appendChild(playerCard);
+}
 
 
 //timer settings
@@ -52,7 +56,6 @@ function startTimer() {
 function stopTimer() {
     clearInterval(countdown);
 }
-
 
 //function
 wholeTimer.addEventListener("click", function(){
