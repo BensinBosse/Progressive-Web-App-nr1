@@ -45,6 +45,8 @@ function giveRandomOccupation() {
     var playerInfo = document.createElement("div");
 
     playerInfo.setAttribute("class", "playerInfo");
+    playerInfo.textContent = "HEJ"
+    playerInfo.style.display = "none"
 
     player.appendChild(playerInfo);
 
@@ -138,16 +140,21 @@ playerContainer.onclick = function (event) {
     inFocus = true;
     focusCard = target;
     console.log("Fokus är " + focusCard);
+    console.log(target)
+    target.firstElementChild.style.display = "block"
 
     //styling
     document.querySelector("body").style.backgroundColor = "rgb(30, 30, 30)";
     playerContainer.style.backgroundColor = "rgb(30, 30, 30)";
     playerContainer.style.overflow = "hidden";
     playerContainer.classList.remove("scroll-shadows");
-  } else if (inFocus === true && focusCard === target) {
+  }
+  
+  else if (inFocus === true && focusCard === target) {
     target.classList.remove("focus-class");
     inFocus = false;
     focusCard = "";
+    target.firstElementChild.style.display = "none"
 
     //styling
     document.querySelector("body").style.backgroundColor = "#333333";
