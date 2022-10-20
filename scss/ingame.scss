@@ -50,7 +50,7 @@ p {
 }
 
 //is given to the player card clicked in game
-.focus {
+.focus-class {
     display: flex;
     position: fixed;
     top: 50%;
@@ -61,7 +61,7 @@ p {
     margin: 0;
     z-index: 1;
     box-shadow: 0px 2px 10px black;
-
+    //background-color: hotpink;
 }
 
 .scroll-shadows {

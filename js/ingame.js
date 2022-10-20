@@ -86,8 +86,26 @@ wholeTimer.addEventListener("click", function(){
     }
 })
 
-//player card being in focus when clicked on
-playerCard.addEventListener("click", function(){
-    playerCard.classList.add('focus')
-    console.log(playerCard + "trycktes på")
-})
+
+//function for putting clicked player card in focus
+let inFocus = false
+let focusCard = ""
+playerContainer.onclick = function(event) {
+    let target = event.target;
+    console.log(target)
+    if (inFocus === false && focusCard === "" && target!== playerContainer){
+        target.classList.add("focus-class");
+        inFocus = true
+        focusCard = target
+        console.log("Fokus är " + focusCard)
+    }
+    else if (inFocus === true && focusCard === target){
+        target.classList.remove("focus-class");
+        inFocus = false
+        focusCard = ""
+    }
+};
+
+if (inFocus === true) {
+    document.querySelector("body").style.background = "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)"
+}

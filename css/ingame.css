@@ -40,7 +40,7 @@ p {
   padding: 0;
 }
 
-.focus {
+.focus-class {
   display: flex;
   position: fixed;
   top: 50%;
