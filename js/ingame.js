@@ -65,7 +65,7 @@ const timerMinutes = document.getElementById("timer-minutes");
 const colon = document.getElementById("colon");
 let onVar = false;
 let finishedVar = false;
-let seconds = 1;
+let seconds = 0;
 let countdown;
 
 timerSeconds.textContent = seconds;
