@@ -16,6 +16,9 @@ while (i2 < playerAmount) {
   playerContainer.appendChild(playerCard);
 }
 
+if (playerAmount < 5) {
+    playerContainer.style.width = "max-content"
+}
 
 //timer settings
 let wholeTimer = document.getElementById("timer")
