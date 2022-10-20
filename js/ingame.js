@@ -27,7 +27,7 @@ const timerMinutes = document.getElementById("timer-minutes")
 const colon = document.getElementById("colon")
 let onVar = false;
 let finishedVar = false;
-let seconds = 0;
+let seconds = 1;
 let countdown;
 
 timerSeconds.textContent = seconds
@@ -35,9 +35,10 @@ colon.textContent = ":0"
 
 // !IMPORTANT KALLE!
 //Detta (minutes) ska vara den globala variabeln som sätt i timer.html,
-//bara för nu har jag satt den som 2 för test
-let minutes = 2
+//bara för nu har jag satt den som 0 för test
+let minutes = 0
 timerMinutes.textContent = minutes
+let nextBtn = document.getElementById("next-btn")
 
 function startTimer() {
     countdown = setInterval(function(){
@@ -52,7 +53,8 @@ function startTimer() {
             }
             else if(seconds == 0 && minutes == 0) {
                 clearInterval(countdown);
-                colon.innerHTML = "TIME´S UP!"
+                colon.innerHTML = "0:00"
+                nextBtn.style.visibility = "visible"
                 timerSeconds.textContent = ""
                 timerMinutes.textContent = ""
                 finishedVar = true
