@@ -3,9 +3,27 @@ let playerArr = players.split(",");
 playerAmount = playerArr.length;
 let i2 = 0;
 
+let skola = [
+  "Skola",
+  "Lärare",
+  "Elev",
+  "Städare",
+  "Mattant",
+  "Rektor",
+  "jfieofjoeijfosidjfoijo",
+];
+let kontor = [
+  "Arbetare",
+  "kenneths mamma",
+  "något mer",
+  "en till sak",
+  "dig sjelv",
+];
+
+let maps = [skola, kontor];
+
 while (i2 < playerAmount) {
   i2++;
-  console.log("hej");
   var playerContainer = document.getElementById("container");
   var playerCard = document.createElement("div");
 
@@ -15,26 +33,47 @@ while (i2 < playerAmount) {
 
   playerContainer.appendChild(playerCard);
 }
+giveRandomOccupation();
+
+function giveRandomOccupation() {
+  i2 = 0;
+  let plats = maps[parseInt(Math.random() * 2)];
+  let lastPlayer = document.getElementsByClassName("item");
+  let player = document.getElementById("");
+  while (i2 < lastPlayer.length) {
+    player = document.getElementById("player" + (i2 + 1));
+    var playerInfo = document.createElement("div");
+
+    playerInfo.setAttribute("id", "player");
+
+    player.appendChild(playerInfo);
+
+    console.log(player);
+    playerCard = Math.random() * plats.length;
+    i2++;
+  }
+}
 
 if (playerAmount < 5) {
-    playerContainer.style.width = "max-content"
+  playerContainer.style.width = "max-content";
 }
 
 //timer settings
-const wholeTimer = document.getElementById("timer")
-const timerSeconds = document.getElementById("timer-seconds")
-const timerMinutes = document.getElementById("timer-minutes")
-const colon = document.getElementById("colon")
+const wholeTimer = document.getElementById("timer");
+const timerSeconds = document.getElementById("timer-seconds");
+const timerMinutes = document.getElementById("timer-minutes");
+const colon = document.getElementById("colon");
 let onVar = false;
 let finishedVar = false;
 let seconds = 1;
 let countdown;
 
-timerSeconds.textContent = seconds
-colon.textContent = ":0"
+timerSeconds.textContent = seconds;
+colon.textContent = ":0";
 
 // !IMPORTANT KALLE!
 //Detta (minutes) ska vara den globala variabeln som sätt i timer.html,
+
 //bara för nu har jag satt den som 0 för test
 let minutes = 0
 timerMinutes.textContent = minutes
@@ -69,27 +108,27 @@ function startTimer() {
             }
         }  
     }, 1000);
+
 }
 
 function stopTimer() {
-    clearInterval(countdown);
+  clearInterval(countdown);
 }
 
 //function
-wholeTimer.addEventListener("click", function(){
-    console.log("Timer klickad")
-    if (onVar === false && finishedVar === false) {
-        startTimer()
-        onVar = true
-    }
-    else if (onVar === true && finishedVar === false) {
-        stopTimer()
-        onVar = false
-    }
-})
-
+wholeTimer.addEventListener("click", function () {
+  console.log("Timer klickad");
+  if (onVar === false && finishedVar === false) {
+    startTimer();
+    onVar = true;
+  } else if (onVar === true && finishedVar === false) {
+    stopTimer();
+    onVar = false;
+  }
+});
 
 //function for putting clicked player card in focus
+
 let inFocus = false
 let focusCard = ""
 playerContainer.onclick = function(event) {
