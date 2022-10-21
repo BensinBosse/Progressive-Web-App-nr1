@@ -10,9 +10,9 @@ h1 {
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   width: 100%;
   background-color: #af7595;
+  overflow-y: scroll;
 }
 
 .player-input {
@@ -26,6 +26,15 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  outline: none;
+}
+
+.player-input:focus {
+  box-shadow: 0px 2px 10px black;
+}
+
+input:focus::placeholder {
+  opacity: 0;
 }
 
 ::placeholder {
