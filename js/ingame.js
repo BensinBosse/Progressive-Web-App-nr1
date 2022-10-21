@@ -37,7 +37,6 @@ while (i2 < playerAmount) {
 
   playerContainer.appendChild(playerCard);
 }
-giveRandomOccupation();
 
 let spyPlayer = "Random_Text";
 function giveRandomOccupation() {
@@ -70,7 +69,7 @@ function giveRandomOccupation() {
         spyOccupied = true;
         spyPlayer = "Random_Text4";
         console.log("spionen är" + spyPlayer)
-        
+
         spyPlayer = players[i2]
         console.log("spionens siffra är" + i2)
         console.log("spionen är" + spyPlayer)
@@ -99,6 +98,8 @@ function giveRandomOccupation() {
     console.log("spionen är" + spyPlayer)
   }
 }
+giveRandomOccupation();
+
 console.log("spionen är slutligen " + spyPlayer)
 //styling for the player cards if less than 5
 if (playerAmount < 5) {
