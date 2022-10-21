@@ -1,4 +1,4 @@
-#btn {
+#bigBtn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,7 +11,7 @@
   z-index: 1;
 }
 
-#p {
+#result {
   position: absolute;
   display: flex;
   top: 50%;
@@ -29,7 +29,7 @@
   border-radius: 0.4em;
 }
 
-#end-btn,
+#prev-btn,
 #next-btn {
   visibility: hidden;
 }

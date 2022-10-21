@@ -5,7 +5,7 @@ $jet: #333333ff;
 $dark-purple: #462749ff;
 $snow: #f7f0f0ff;
 
-#btn {
+#bigBtn {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -18,7 +18,7 @@ $snow: #f7f0f0ff;
     z-index: 1;
 }
 
-#p {
+#result {
     position: absolute;
     display: flex;
     top: 50%;
@@ -36,8 +36,7 @@ $snow: #f7f0f0ff;
     border-radius: 0.4em;
 }
 
-#end-btn,
+#prev-btn,
 #next-btn {
     visibility: hidden;
 }
-

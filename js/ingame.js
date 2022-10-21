@@ -88,11 +88,12 @@ function giveRandomOccupation() {
   }
 }
 
+//styling for the player cards if less than 5
 if (playerAmount < 5) {
   playerContainer.style.width = "max-content";
 }
 
-//timer settings
+//timer variables declared
 const wholeTimer = document.getElementById("timer");
 const timerSeconds = document.getElementById("timer-seconds");
 const timerMinutes = document.getElementById("timer-minutes");
@@ -101,15 +102,10 @@ let onVar = false;
 let finishedVar = false;
 let seconds = 0;
 let countdown;
-
 timerSeconds.textContent = seconds;
 colon.textContent = ":0";
 
-// !IMPORTANT KALLE!
-//Detta (minutes) ska vara den globala variabeln som sätt i timer.html,
-//bara för nu har jag satt den som 0 för test
-
-//hämtar värdet och sätter minutes till savedTime
+//function for timer
 getSavedTime();
 console.log(newTimerValue);
 let minutes = newTimerValue;
@@ -149,9 +145,8 @@ function stopTimer() {
   clearInterval(countdown);
 }
 
-//function
+//function for timer on-click
 wholeTimer.addEventListener("click", function () {
-  console.log("Timer klickad");
   if (onVar === false && finishedVar === false) {
     startTimer();
     onVar = true;
@@ -162,19 +157,15 @@ wholeTimer.addEventListener("click", function () {
 });
 
 //function for putting clicked player card in focus
-
 let inFocus = false;
 let focusCard = "";
 playerContainer.onclick = function (event) {
   let target = event.target;
-  console.log(target);
 
   if (inFocus === false && focusCard === "" && target !== playerContainer) {
     target.classList.add("focus-class");
     inFocus = true;
     focusCard = target;
-    console.log("Fokus är " + focusCard);
-    console.log(target);
     target.firstElementChild.style.display = "block";
 
     //styling
@@ -206,3 +197,25 @@ playerContainer.onclick = function (event) {
     playerContainer.classList.add("scroll-shadows");
   }
 };
+
+//Navigation:
+let prevBtn = document.getElementById("prev-btn")
+
+//För GitHub:
+
+// prevBtn.addEventListener("click", function(){
+//     window.location.href = "/progressive-web-app-nr1/timer.html"
+// })
+
+// nextBtn.addEventListener("click", function(){
+//   window.location.href = "/progressive-web-app-nr1/end.html"
+// })
+
+//För dev-server:
+prevBtn.addEventListener("click", function(){
+    window.location.href = "/timer.html"
+})
+
+nextBtn.addEventListener("click", function(){
+  window.location.href = "/end.html"
+})
