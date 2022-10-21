@@ -23,24 +23,23 @@ increaseBtn.addEventListener("click", function increaseTime(){
 
 
 //För GitHub:
-
-// prevBtn.addEventListener("click", function(){
-//     saveTime()
-//     window.location.href = "/progressive-web-app-nr1/timer.html"
-// })
-
-// nextBtn.addEventListener("click", function(){
-//   saveTime()    
-//   window.location.href = "/progressive-web-app-nr1/end.html"
-// })
-
-//För dev-server:
 prevBtn.addEventListener("click", function(){
     saveTime()
-    window.location.href = "/timer.html"
+    window.location.href = "/progressive-web-app-nr1/timer.html"
 })
 
 nextBtn.addEventListener("click", function(){
-    saveTime()
-  window.location.href = "/end.html"
+  saveTime()    
+  window.location.href = "/progressive-web-app-nr1/end.html"
 })
+
+//För dev-server:
+// prevBtn.addEventListener("click", function(){
+//     saveTime()
+//     window.location.href = "/timer.html"
+// })
+
+// nextBtn.addEventListener("click", function(){
+//     saveTime()
+//   window.location.href = "/end.html"
+// })
