@@ -67,6 +67,7 @@ function giveRandomOccupation() {
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
         spyPlayer = player
+        spyPlayerSave()
         playerInfo.textContent = randomOccupation;
 
       } else {

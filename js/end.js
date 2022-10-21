@@ -4,8 +4,8 @@ const againBtn = document.getElementById("next-btn")
 
 bigBtn.addEventListener("click", function(){
     bigBtn.style.visibility = "hidden"
-    console.log("gömd")
-    result.textContent = spyPlayer + "!" //Denna ska såklart vara en variabel sedan
+    getSavedSpy()
+    result.textContent = finalSpyValue + "!"
     againBtn.style.visibility = "visible"
 })
 
