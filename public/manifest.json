@@ -3,7 +3,7 @@
   "short_name": "KenFall",
   "theme_color": "#53dd6c",
   "background_color": "#56203d",
-  "display": "standalone",
+  "display": "browser",
   "orientation": "landscape",
   "scope": "/",
   "start_url": "/Index.html",
