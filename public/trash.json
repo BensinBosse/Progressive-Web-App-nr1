@@ -1,8 +1,9 @@
+
 {
   "name": "KennethFall",
   "short_name": "KenFall",
-  "theme_color": "#53dd6c",
-  "background_color": "#56203d",
+  "theme_color": "hotpink",
+  "background_color": "hotpink",
   "display": "browser",
   "orientation": "landscape",
   "scope": "/",
