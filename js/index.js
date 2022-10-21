@@ -27,6 +27,8 @@ function addPlayer() {
   console.log(playerCount);
 }
 
+if (input.value)
+
 function removePlayer() {
   playerCount = document.getElementsByClassName("player-input").length;
   var playerBox = document.getElementById("player-box");
