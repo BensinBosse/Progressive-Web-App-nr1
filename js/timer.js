@@ -25,12 +25,12 @@ increaseBtn.addEventListener("click", function increaseTime(){
 //För GitHub:
 prevBtn.addEventListener("click", function(){
     saveTime()
-    window.location.href = "/progressive-web-app-nr1/timer.html"
+    window.location.href = "/progressive-web-app-nr1/Index.html"
 })
 
 nextBtn.addEventListener("click", function(){
   saveTime()    
-  window.location.href = "/progressive-web-app-nr1/end.html"
+  window.location.href = "/progressive-web-app-nr1/ingame.html"
 })
 
 //För dev-server:
