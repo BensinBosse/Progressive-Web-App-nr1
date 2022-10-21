@@ -1,8 +1,8 @@
 {
   "name": "KennethFall: The Game",
   "short_name": "KennethFall",
-  "theme_color": "#53dd6c",
-  "background_color": "#56203d",
+  "theme_color": "#9fffcb",
+  "background_color": "#333333",
   "display": "standalone",
   "orientation": "landscape",
   "scope": ".",
