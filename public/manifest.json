@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "landscape",
   "scope": "/",
-  "start_url": "/progressive-web-app-nr1/Index.html",
+  "start_url": "/Index.html",
   "icons": [
     {
       "src": "src/images/icons/icon-72x72.png",
