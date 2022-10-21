@@ -22,3 +22,14 @@ function bengt() {
 function knut() {
   players = localStorage.getItem("savedPlayers");
 }
+
+//sparar spyPlayer till local storage
+function spyPlayerSave() {
+  localStorage.setItem("spyPlayerSaved", spyPlayer);
+}
+
+let finalSpyValue;
+//hämtar spyPlayerSaved
+function getSavedSpy() {
+  finalSpyValue = localStorage.getItem("spyPlayerSaved");
+}
