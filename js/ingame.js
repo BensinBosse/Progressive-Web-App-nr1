@@ -43,6 +43,7 @@ function giveRandomOccupation() {
   i2 = 0;
 
   let spyOccupied = false;
+  let spyPlayer;
   let randomOccupationNum = 0;
   let randomOccupation;
 
@@ -65,6 +66,7 @@ function giveRandomOccupation() {
 
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
+        spyPlayer = player
         playerInfo.textContent = randomOccupation;
 
       } else {
