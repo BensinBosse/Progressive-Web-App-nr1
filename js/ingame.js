@@ -68,6 +68,7 @@ function giveRandomOccupation() {
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
         spyPlayer = players[i2]
+        console.log("spionens siffra är" + i2)
         console.log("spionen är" + spyPlayer)
         playerInfo.textContent = randomOccupation;
 
