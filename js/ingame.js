@@ -43,7 +43,7 @@ function giveRandomOccupation() {
   i2 = 0;
 
   let spyOccupied = false;
-  let spyPlayer;
+  let spyPlayer = "";
   let randomOccupationNum = 0;
   let randomOccupation;
 
@@ -67,7 +67,6 @@ function giveRandomOccupation() {
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
         spyPlayer = player
-        spyPlayerSave()
         playerInfo.textContent = randomOccupation;
 
       } else {
@@ -210,6 +209,7 @@ prevBtn.addEventListener("click", function(){
 })
 
 nextBtn.addEventListener("click", function(){
+  spyPlayerSave()
   window.location.href = "/progressive-web-app-nr1/end.html"
 })
 

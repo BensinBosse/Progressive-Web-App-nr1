@@ -29,8 +29,8 @@ prevBtn.addEventListener("click", function(){
 })
 
 nextBtn.addEventListener("click", function(){
-  saveTime()    
-  window.location.href = "/progressive-web-app-nr1/ingame.html"
+    saveTime()    
+    window.location.href = "/progressive-web-app-nr1/ingame.html"
 })
 
 //För dev-server:
