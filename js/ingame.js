@@ -44,7 +44,7 @@ function giveRandomOccupation() {
   i2 = 0;
 
   let spyOccupied = false;
-  let spyPlayer = "Random_Text";
+  spyPlayer = "Random_Text2";
   let randomOccupationNum = 0;
   let randomOccupation;
 
@@ -54,6 +54,7 @@ function giveRandomOccupation() {
   while (i2 < lastPlayer.length) {
     player = document.getElementById("player" + (i2 + 1));
     var playerInfo = document.createElement("div");
+    spyPlayer = "Random_Text3";
 
     if (i2 + 1 == lastPlayer.length && spyOccupied == false) {
       randomOccupationNum = 1;
@@ -67,6 +68,9 @@ function giveRandomOccupation() {
 
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
+        spyPlayer = "Random_Text4";
+        console.log("spionen är" + spyPlayer)
+        
         spyPlayer = players[i2]
         console.log("spionens siffra är" + i2)
         console.log("spionen är" + spyPlayer)
@@ -95,7 +99,7 @@ function giveRandomOccupation() {
     console.log("spionen är" + spyPlayer)
   }
 }
-console.log("spionen är slutligen" + spyPlayer)
+console.log("spionen är slutligen " + spyPlayer)
 //styling for the player cards if less than 5
 if (playerAmount < 5) {
   playerContainer.style.width = "max-content";
@@ -115,7 +119,6 @@ colon.textContent = ":0";
 
 //function for timer
 getSavedTime();
-console.log(newTimerValue);
 let minutes = newTimerValue;
 timerMinutes.textContent = minutes;
 const nextBtn = document.getElementById("next-btn");
