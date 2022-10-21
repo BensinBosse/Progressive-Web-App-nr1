@@ -4,16 +4,21 @@ let playerCount = document.getElementsByClassName("player-input").length;
 var playerCountString = "input-" + playerCount;
 console.log(playerCountString);
 
-function nextPage() {
+//navigation
+let nextBtn = document.getElementById("next-btn")
+nextBtn.addEventListener("click", function nextPage() {
   bengt();
-  window.location.href = "/progressive-web-app-nr1/timer.html"; 
   console.log(players);
-}
+
+  //För GitHub:
+  //window.location.href = "/progressive-web-app-nr1/timer.html";
+
+  //För dev-server:
+  window.location.href = "/timer.html";
+})
 
 let addBtn = document.getElementById("more-btn")
 let removeBtn = document.getElementById("fewer-btn")
-
-//if (input.value)
 
 removeBtn.addEventListener("click", function removePlayer() {
   playerCount = document.getElementsByClassName("player-input").length;

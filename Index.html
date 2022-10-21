@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="src\images\icons\icon-192x192.png" />
 
     <meta charset="UTF-8" />
 
@@ -11,13 +11,14 @@
       content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
     <meta name="description" content="Spyfall Clone i en PWA" />
-    <meta name="theme-color" content="#53dd6c" />
+    <meta name="theme-color" content="#333333" />
 
-    <!--All meta här gör så att Apple enheter ska kunna fungera, och det sätter fullscreen med en status bar som får våran tema färg(tror jag), finns mer att läsa på "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html"-->
+    <!--All meta här gör så att Apple enheter ska kunna fungera, och det sätter fullscreen med en status bar som får våran tema färg(tror jag),
+      finns mer att läsa på "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html"-->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="KennethFall" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#53dd6c" />
-    <link href="/src\images/icons/icon-192x192.png" rel="apple-touch-icon" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#333333" />
+    <link href="/src/images/icons/icon-192x192.png" rel="apple-touch-icon" />
 
     <!--Pekar på ikonen vi ska använda-->
 
@@ -67,28 +68,12 @@
     </main>
 
     <div class="nav-buttons">
-      <button
-        id="prev-btn"
-        class="btn"
-        onclick="window.location.href = '/index.html';"
-      >
-        GO BACK
-      </button>
-      <button id="next-btn" class="btn" onclick="nextPage()">NEXT</button>
+      <button id="prev-btn" class="btn">GO BACK</button>
+      <button id="next-btn" class="btn">NEXT</button>
     </div>
 
     <!--Ett trött försök till att få sw.js att fungera-->
     <script>
-      // if ("serviceWorker" in navigator) {
-      //   try {
-      //     navigator.serviceWorker.register("serviceWorker.js");
-
-      //     console.log("SW Registered");
-      //   } catch (error) {
-      //     console.log("SW Registration fail");
-      //   }
-      // }
-
       if("serviceWorker" in navigator){
     navigator.serviceWorker.register("serviceWorker.js").then(registration => {
         console.log("SW Registered");
@@ -103,6 +88,3 @@
     <script src="js/index.js"></script>
   </body>
 </html>
-
-<!--klockan är 21:35 och nu ger jag upp-->
-<!-- fair enough, good work man -->

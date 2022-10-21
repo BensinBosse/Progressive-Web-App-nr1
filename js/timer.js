@@ -1,6 +1,7 @@
 const increaseBtn = document.getElementById("increase-btn")
 const decreaseBtn = document.getElementById("decrease-btn")
 const nextBtn = document.getElementById("next-btn")
+const prevBtn = document.getElementById("prev-btn")
 let timerMinutes = document.getElementById("timer-minutes")
 let timerValue = 10
 timerMinutes.innerHTML = timerValue
@@ -20,8 +21,26 @@ increaseBtn.addEventListener("click", function increaseTime(){
     }
 })
 
-//sparar och går till nästa
+
+//För GitHub:
+
+// prevBtn.addEventListener("click", function(){
+//     saveTime()
+//     window.location.href = "/progressive-web-app-nr1/timer.html"
+// })
+
+// nextBtn.addEventListener("click", function(){
+//   saveTime()    
+//   window.location.href = "/progressive-web-app-nr1/end.html"
+// })
+
+//För dev-server:
+prevBtn.addEventListener("click", function(){
+    saveTime()
+    window.location.href = "/timer.html"
+})
+
 nextBtn.addEventListener("click", function(){
     saveTime()
-    window.location.href = "/progressive-web-app-nr1/ingame.html"
+  window.location.href = "/end.html"
 })
