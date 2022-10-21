@@ -26,6 +26,11 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  outline: none;
+}
+
+.player-input:focus {
+  box-shadow: 0px 2px 10px black;
 }
 
 ::placeholder {
