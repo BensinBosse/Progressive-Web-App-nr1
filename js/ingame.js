@@ -67,18 +67,20 @@ function giveRandomOccupation() {
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
         spyPlayer = players[i2]
-        console.log(spyPlayer)
+        console.log("spionen är" + spyPlayer)
         playerInfo.textContent = randomOccupation;
 
       } else {
         playerInfo.textContent = randomOccupation + " : " + plats[0];
       }
+      console.log("spionen är" + spyPlayer)
 
 
     } else if (spyOccupied == true) {
       randomOccupationNum = Math.random() * (plats.length - 2) + 2;
       randomOccupation = plats[parseInt(randomOccupationNum)];
       playerInfo.textContent = randomOccupation + " : " + plats[0];
+      console.log("spionen är" + spyPlayer)
     }
 
     playerInfo.setAttribute("class", "playerInfo");
@@ -88,6 +90,7 @@ function giveRandomOccupation() {
 
     playerCard = Math.random() * plats.length;
     i2++;
+    console.log("spionen är" + spyPlayer)
   }
 }
 
@@ -113,7 +116,7 @@ getSavedTime();
 console.log(newTimerValue);
 let minutes = newTimerValue;
 timerMinutes.textContent = minutes;
-let nextBtn = document.getElementById("next-btn");
+const nextBtn = document.getElementById("next-btn");
 
 function startTimer() {
   countdown = setInterval(function () {
