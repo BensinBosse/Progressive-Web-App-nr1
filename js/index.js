@@ -6,7 +6,7 @@ console.log(playerCountString);
 
 function nextPage() {
   bengt();
-  window.location.href = "/timer.html";
+  window.location.href = "/Progressive-Web-App-nr1/timer.html";
   console.log(players);
 }
 
