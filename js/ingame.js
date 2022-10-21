@@ -66,7 +66,8 @@ function giveRandomOccupation() {
 
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
-        spyPlayer = player
+        spyPlayer = players[i2]
+        console.log(spyPlayer)
         playerInfo.textContent = randomOccupation;
 
       } else {
