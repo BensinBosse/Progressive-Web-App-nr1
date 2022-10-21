@@ -43,6 +43,8 @@ function giveRandomOccupation() {
   i2 = 0;
 
   let spyOccupied = false;
+
+  //Denna är den sista som går igenom:
   spyPlayer = "Random_Text2";
   let randomOccupationNum = 0;
   let randomOccupation;
@@ -66,12 +68,16 @@ function giveRandomOccupation() {
 
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
+
+        //Dessa händer inte:
         spyPlayer = "Random_Text4";
         console.log("spionen är" + spyPlayer)
-
         spyPlayer = players[i2]
+
+        //Inte dessa heller:
         console.log("spionens siffra är" + i2)
         console.log("spionen är" + spyPlayer)
+        
         playerInfo.textContent = randomOccupation;
 
       } else {
@@ -79,12 +85,10 @@ function giveRandomOccupation() {
       }
       console.log("spionen är" + spyPlayer)
 
-
     } else if (spyOccupied == true) {
       randomOccupationNum = Math.random() * (plats.length - 2) + 2;
       randomOccupation = plats[parseInt(randomOccupationNum)];
       playerInfo.textContent = randomOccupation + " : " + plats[0];
-      console.log("spionen är" + spyPlayer)
     }
 
     playerInfo.setAttribute("class", "playerInfo");
@@ -94,7 +98,6 @@ function giveRandomOccupation() {
 
     playerCard = Math.random() * plats.length;
     i2++;
-    console.log("spionen är" + spyPlayer)
   }
 }
 giveRandomOccupation();
