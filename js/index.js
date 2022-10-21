@@ -19,10 +19,12 @@ removeBtn.addEventListener("click", function removePlayer() {
   playerCount = document.getElementsByClassName("player-input").length;
   var playerBox = document.getElementById("player-box");
   console.log("RM WORKED");
+  console.log(playerCount);
 
   if (playerCount <= 3) {
     return;
   }
+  playerCount = playerCount -1;
 
   playerBox.removeChild(playerBox.lastElementChild);
 })

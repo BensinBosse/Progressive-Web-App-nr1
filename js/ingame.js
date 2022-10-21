@@ -48,31 +48,34 @@ function giveRandomOccupation() {
 
   let plats = maps[parseInt(Math.random() * 2)];
   let lastPlayer = document.getElementsByClassName("item");
-  let player = document.getElementById("");
+  let player = document.getElementById("player1");
   while (i2 < lastPlayer.length) {
     player = document.getElementById("player" + (i2 + 1));
     var playerInfo = document.createElement("div");
 
     if (i2 + 1 == lastPlayer.length && spyOccupied == false) {
-      console.log("första if sats");
       randomOccupationNum = 1;
       randomOccupation = plats[randomOccupationNum];
       playerInfo.textContent = randomOccupation;
-    } else if (spyOccupied == false) {
-      console.log("andra if sats");
+    } 
+    
+    else if (spyOccupied == false) {
       randomOccupationNum = Math.random() * (plats.length - 1) + 1;
       randomOccupation = plats[parseInt(randomOccupationNum)];
 
       if (parseInt(randomOccupationNum) == 1) {
         spyOccupied = true;
+        playerInfo.textContent = randomOccupation;
+
       } else {
-        playerInfo.textContent = randomOccupation + " " + plats[0];
+        playerInfo.textContent = randomOccupation + " : " + plats[0];
       }
+
+
     } else if (spyOccupied == true) {
-      console.log("tredje if sats");
       randomOccupationNum = Math.random() * (plats.length - 2) + 2;
       randomOccupation = plats[parseInt(randomOccupationNum)];
-      playerInfo.textContent = randomOccupation + " " + plats[0];
+      playerInfo.textContent = randomOccupation + " : " + plats[0];
     }
 
     playerInfo.setAttribute("class", "playerInfo");
@@ -82,7 +85,6 @@ function giveRandomOccupation() {
 
     playerCard = Math.random() * plats.length;
     i2++;
-    console.log("i " + i2);
   }
 }
 
