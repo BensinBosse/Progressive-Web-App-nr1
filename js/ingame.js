@@ -53,7 +53,6 @@ function giveRandomOccupation() {
   while (i2 < lastPlayer.length) {
     player = document.getElementById("player" + (i2 + 1));
     var playerInfo = document.createElement("div");
-    spyPlayer = "Random_Text3";
 
     if (i2 + 1 == lastPlayer.length && spyOccupied == false) {
       randomOccupationNum = 1;
