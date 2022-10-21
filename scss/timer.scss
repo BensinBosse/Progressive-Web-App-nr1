@@ -48,7 +48,10 @@ h1 {
     color: $aquamarine;
 }
 
-
+#increase-btn,
+#decrease-btn {
+    touch-action: manipulation;
+}
 
 // @media-queries vvv
 @media screen and (min-height: 650px){
