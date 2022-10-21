@@ -28,7 +28,7 @@ function spyPlayerSave() {
   localStorage.setItem("spyPlayerSaved", spyPlayer);
 }
 
-let finalSpyValue;
+let finalSpyValue = "";
 //hämtar spyPlayerSaved
 function getSavedSpy() {
   finalSpyValue = localStorage.getItem("spyPlayerSaved");
