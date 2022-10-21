@@ -10,11 +10,11 @@ nextBtn.addEventListener("click", function nextPage() {
   bengt();
   console.log(players);
 
-  //För GitHub:
-  //window.location.href = "/progressive-web-app-nr1/timer.html";
+  // För GitHub:
+  window.location.href = "/progressive-web-app-nr1/timer.html";
 
   //För dev-server:
-  window.location.href = "/timer.html";
+  // window.location.href = "/timer.html";
 })
 
 let addBtn = document.getElementById("more-btn")

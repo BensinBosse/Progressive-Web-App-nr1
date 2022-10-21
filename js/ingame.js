@@ -202,20 +202,19 @@ playerContainer.onclick = function (event) {
 let prevBtn = document.getElementById("prev-btn")
 
 //För GitHub:
-
-// prevBtn.addEventListener("click", function(){
-//     window.location.href = "/progressive-web-app-nr1/timer.html"
-// })
-
-// nextBtn.addEventListener("click", function(){
-//   window.location.href = "/progressive-web-app-nr1/end.html"
-// })
-
-//För dev-server:
 prevBtn.addEventListener("click", function(){
-    window.location.href = "/timer.html"
+    window.location.href = "/progressive-web-app-nr1/timer.html"
 })
 
 nextBtn.addEventListener("click", function(){
-  window.location.href = "/end.html"
+  window.location.href = "/progressive-web-app-nr1/end.html"
 })
+
+//För dev-server:
+// prevBtn.addEventListener("click", function(){
+//     window.location.href = "/timer.html"
+// })
+
+// nextBtn.addEventListener("click", function(){
+//   window.location.href = "/end.html"
+// })
