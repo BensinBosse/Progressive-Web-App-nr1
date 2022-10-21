@@ -27,6 +27,11 @@ removeBtn.addEventListener("click", function removePlayer() {
   playerBox.removeChild(playerBox.lastElementChild);
 })
 
+let playerContainer = document.getElementById("player-box")
+function scrollBottom(element) {
+  element.scroll({ top: element.scrollHeight, behavior: "smooth"})
+}
+
 addBtn.addEventListener("click", function addPlayer() {
   var playerBox = document.getElementById("player-box");
   var input = document.createElement("input");
@@ -42,4 +47,7 @@ addBtn.addEventListener("click", function addPlayer() {
 
   playerCount = document.getElementsByClassName("player-input").length;
   console.log(playerCount);
+  scrollBottom(playerContainer)
 })
+
+scrollBottom(playerContainer);

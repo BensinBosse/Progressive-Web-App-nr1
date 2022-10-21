@@ -17,9 +17,9 @@ h1 {
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   width: 100%;
   background-color: $opera-mauve;
+  overflow-y: scroll;
 }
 
 .player-input {
