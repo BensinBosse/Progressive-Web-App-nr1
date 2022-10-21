@@ -37,7 +37,11 @@ h1 {
 }
 
 .player-input:focus {
-    box-shadow: 0px 2px 10px black;
+  box-shadow: 0px 2px 10px black;
+}
+
+input:focus::placeholder {
+  opacity: 0;
 }
 
 ::placeholder {

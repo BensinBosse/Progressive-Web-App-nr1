@@ -10,26 +10,12 @@ function nextPage() {
   console.log(players);
 }
 
-function addPlayer() {
-  var playerBox = document.getElementById("player-box");
-  var input = document.createElement("input");
-  input.type = "text";
+let addBtn = document.getElementById("more-btn")
+let removeBtn = document.getElementById("fewer-btn")
 
-  input.setAttribute("type", "text");
-  input.setAttribute("class", "player-input");
-  input.setAttribute("id", "input-" + (playerCount + 1));
+//if (input.value)
 
-  input.setAttribute("placeholder", "Player " + (playerCount + 1) + " name");
-
-  playerBox.appendChild(input);
-
-  playerCount = document.getElementsByClassName("player-input").length;
-  console.log(playerCount);
-}
-
-if (input.value)
-
-function removePlayer() {
+removeBtn.addEventListener("click", function removePlayer() {
   playerCount = document.getElementsByClassName("player-input").length;
   var playerBox = document.getElementById("player-box");
   console.log("RM WORKED");
@@ -39,4 +25,21 @@ function removePlayer() {
   }
 
   playerBox.removeChild(playerBox.lastElementChild);
-}
+})
+
+addBtn.addEventListener("click", function addPlayer() {
+  var playerBox = document.getElementById("player-box");
+  var input = document.createElement("input");
+  input.type = "text";
+
+  input.setAttribute("type", "text");
+  input.setAttribute("class", "player-input");
+  input.setAttribute("id", "input-" + (playerCount + 1));
+  input.setAttribute("placeholder", "Player " + (playerCount + 1) + " name");
+  input.setAttribute("Maxlength", "6")
+
+  playerBox.appendChild(input);
+
+  playerCount = document.getElementsByClassName("player-input").length;
+  console.log(playerCount);
+})

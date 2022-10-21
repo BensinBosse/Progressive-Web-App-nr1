@@ -35,7 +35,7 @@
     </div>
 
     <main>
-      <button class="btn" id="fewer-btn" onclick="removePlayer()">
+      <button class="btn" id="fewer-btn">
         <img src="src/images/indexminus.svg" alt="" />
       </button>
       <form id="player-box">
@@ -44,18 +44,21 @@
           class="player-input"
           id="input-1"
           placeholder="Player 1 name"
+          maxlength="6"
         />
         <input
           type="text"
           class="player-input"
           id="input-2"
           placeholder="Player 2 name"
+          maxlength="6"
         />
         <input
           type="text"
           class="player-input"
           id="input-3"
           placeholder="Player 3 name"
+          maxlength="6"
         />
       </form>
       <button class="btn" id="more-btn" onclick="addPlayer()">
