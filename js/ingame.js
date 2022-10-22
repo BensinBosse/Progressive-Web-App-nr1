@@ -76,7 +76,7 @@ function giveRoles() {
 
   SpyName = "hej";
   playerSpy.innerHTML +=
-    '<div class="playerInfo" style="display: none;">You are the Spy!!!</div>';
+    '<div class="playerInfo" style="display: none;">KENNETH</div>';
 
   console.log(Map.name);
 
@@ -142,15 +142,14 @@ const timerMinutes = document.getElementById("timer-minutes");
 const colon = document.getElementById("colon");
 let onVar = false;
 let finishedVar = false;
-let seconds = 2;
+let seconds = 0;
 let countdown;
 timerSeconds.textContent = seconds;
 colon.textContent = ":0";
 
 //function for timer
 getSavedTime();
-let minutes = 0
-//let minutes = newTimerValue;
+let minutes = newTimerValue;
 timerMinutes.textContent = minutes;
 const nextBtn = document.getElementById("next-btn");
 
