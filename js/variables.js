@@ -33,3 +33,12 @@ function spyPlayerSave() {
 function getSavedSpy() {
   finalSpyValue = localStorage.getItem("spyPlayerSaved");
 }
+
+// let body = document.querySelector("body")
+
+// if(body.clientHeight > body.clientWidth){
+//   body.style.backgroundColor = "hotpink"
+//   console.log("height is " + body.clientHeight + ", width = " + body.clientWidth)
+// }
+
+screen.orientation.lock("landscape")
