@@ -1,0 +1,20 @@
+body {
+  overflow: auto;
+}
+
+#next-btn {
+  visibility: hidden;
+}
+
+main {
+  display: flex;
+  width: 60vw;
+  height: 80vh;
+  margin: 5% auto;
+  flex-direction: column;
+  font-size: 1vw;
+  color: #f7f0f0;
+  text-shadow: 0px 0px 5px black;
+}
+
+/*# sourceMappingURL=rules.css.map */

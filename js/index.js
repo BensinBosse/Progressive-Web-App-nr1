@@ -65,6 +65,15 @@ nextBtn.addEventListener("click", function nextPage() {
   window.location.href = "/timer.html";
 });
 
+let rulesBtn = document.getElementById("rules-btn");
+  rulesBtn.addEventListener("click", function(){
+  // För GitHub:
+  // window.location.href = "/progressive-web-app-nr1/rules.html";
+
+  // För dev-server:
+  window.location.href = "/rules.html";
+})
+
 //Sätter justify-content: space-around på playerContainer,
 //bara sålänge den inte overflowar
 function scrollCheck() {

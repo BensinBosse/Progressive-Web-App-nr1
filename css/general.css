@@ -32,7 +32,8 @@ h1 {
   cursor: pointer;
 }
 
-#prev-btn {
+#prev-btn,
+#rules-btn {
   background-color: #af7595;
 }
 
