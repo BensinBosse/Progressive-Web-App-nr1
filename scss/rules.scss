@@ -1,0 +1,25 @@
+$pale-cerulean: #95b8d1ff;
+$opera-mauve: #af7595ff;
+$aquamarine: #9fffcbff;
+$jet: #333333ff;
+$dark-purple: #462749ff;
+$snow: #f7f0f0ff;
+
+body {
+    overflow: auto;
+}
+
+#next-btn {
+    visibility: hidden;
+}
+
+main {
+    display: flex;
+    width: 60vw;
+    height: 80vh;
+    margin: 5% auto;
+    flex-direction: column;
+    font-size: 1vw;
+    color: $snow;
+    text-shadow: 0px 0px 5px black;
+}
