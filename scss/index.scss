@@ -19,7 +19,7 @@ h1 {
   flex-direction: column;
   width: 100%;
   background-color: $opera-mauve;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .player-input {
