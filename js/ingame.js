@@ -1,108 +1,131 @@
 knut();
+
 let playerArr = players.split(",");
 playerAmount = playerArr.length;
-let i2 = 0;
+let i = 0;
 
-let skola = [
-  "Skola",
-  "spion",
-  "Lärare",
-  "Elev",
-  "Städare",
-  "Mattant",
-  "Rektor",
-  "jfieofjoeijfosidjfoijo",
+const locations = [
+  {
+    name: "Skola",
+    roles: [
+      "lärare",
+      "elev",
+      "kenneth",
+      "något mer",
+      "ronnie",
+      "cisco",
+      "fasdfasdfasdfasdfasdfasdfasdffsgd",
+    ],
+  },
+  {
+    name: "Donken",
+    roles: [
+      "burgaren",
+      "kock",
+      "kund",
+      "alexdonkenpoäng",
+      "raggarsvin",
+      "fyllo",
+    ],
+  },
 ];
-let kontor = [
-  "kontor",
-  "spion",
-  "Arbetare",
-  "kenneths mamma",
-  "något mer",
-  "en till sak",
-  "dig sjelv",
-];
-console.log(skola);
 
-let maps = [skola, kontor];
-
-while (i2 < playerAmount) {
-  i2++;
+while (i < playerAmount) {
+  i++;
   var playerContainer = document.getElementById("container");
   var playerCard = document.createElement("div");
 
   playerCard.setAttribute("class", "item");
-  playerCard.setAttribute("id", "player" + i2);
-  playerCard.insertAdjacentText("beforeend", playerArr[i2 - 1]);
+  playerCard.setAttribute("id", "player" + i);
+  playerCard.insertAdjacentText("beforeend", playerArr[i - 1]);
 
   playerContainer.appendChild(playerCard);
 }
 
-let spyPlayer = "Random_Text";
-function giveRandomOccupation() {
-  i2 = 0;
+function giveRoles() {
+  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  //VIKTIGT! DU FÅR INTE ÄNDRA HÄR FÖR JAG EXPERIMENTERAR MED NYA LÖSNINGAR FÖR ATT GÖRA DET LÄTTARE FÖR BÅDE DIG OCH MIG:
 
-  let spyOccupied = false;
+  i = 1;
+  let randomNumber = Math.random() * locations.length - 1;
+  console.log(locations.length);
+  let MapNumber = parseInt(randomNumber);
+  const Map = locations[MapNumber];
 
-  //Denna är den sista som går igenom:
-  spyPlayer = "Random_Text2";
-  let randomOccupationNum = 0;
-  let randomOccupation;
+  for (let playerInfo in playerArr) {
+    randomNumber = Math.random() * Map.roles.length;
+    playerInfo = Map.roles[parseInt(randomNumber)];
 
-  let plats = maps[parseInt(Math.random() * 2)];
-  let lastPlayer = document.getElementsByClassName("item");
-  let player = document.getElementById("player1");
-  while (i2 < lastPlayer.length) {
-    player = document.getElementById("player" + (i2 + 1));
-    var playerInfo = document.createElement("div");
-
-    if (i2 + 1 == lastPlayer.length && spyOccupied == false) {
-      randomOccupationNum = 1;
-      randomOccupation = plats[randomOccupationNum];
-      playerInfo.textContent = randomOccupation;
-    } 
-    
-    else if (spyOccupied == false) {
-      randomOccupationNum = Math.random() * (plats.length - 1) + 1;
-      randomOccupation = plats[parseInt(randomOccupationNum)];
-
-      if (parseInt(randomOccupationNum) == 1) {
-        spyOccupied = true;
-
-        //Dessa händer inte:
-        spyPlayer = "Random_Text4";
-        console.log("spionen är" + spyPlayer)
-        spyPlayer = players[i2]
-
-        //Inte dessa heller:
-        console.log("spionens siffra är" + i2)
-        console.log("spionen är" + spyPlayer)
-        
-        playerInfo.textContent = randomOccupation;
-
-      } else {
-        playerInfo.textContent = randomOccupation + " : " + plats[0];
-      }
-      console.log("spionen är" + spyPlayer)
-
-    } else if (spyOccupied == true) {
-      randomOccupationNum = Math.random() * (plats.length - 2) + 2;
-      randomOccupation = plats[parseInt(randomOccupationNum)];
-      playerInfo.textContent = randomOccupation + " : " + plats[0];
-    }
-
-    playerInfo.setAttribute("class", "playerInfo");
-
-    playerInfo.style.display = "none";
-    player.appendChild(playerInfo);
-
-    playerCard = Math.random() * plats.length;
-    i2++;
+    let player = document.getElementById("player" + i);
+    var playerOccupation = document.createElement("div");
+    playerOccupation.textContent = Map.name + " : " + playerInfo;
+    playerOccupation.setAttribute("class", "playerInfo");
+    playerOccupation.style.display = "none";
+    player.appendChild(playerOccupation);
+    i++;
   }
-}
-giveRandomOccupation();
 
-console.log("spionen är slutligen " + spyPlayer)
+  randomNumber = parseInt(Math.random() * (i - 1) + 1);
+  playerSpy = document.getElementById("player" + randomNumber);
+  playerSpy.removeChild(playerSpy.firstElementChild);
+  console.log(" hej", playerSpy.children);
+
+  SpyName = "hej";
+  playerSpy.innerHTML +=
+    '<div class="playerInfo" style="display: none;">You are the Spy!!!</div>';
+
+  console.log(Map.name);
+
+  //DET GÄLLER TILL HIT
+  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  // i2 = 0;
+  // let spyOccupied = false;
+  // //Denna är den sista som går igenom:
+  // spyPlayer = "Random_Text2";
+  // let randomOccupationNum = 0;
+  // let randomOccupation;
+  // let plats = maps[parseInt(Math.random() * 2)];
+  // let lastPlayer = document.getElementsByClassName("item");
+  // let player = document.getElementById("player1");
+  // while (i2 < lastPlayer.length) {
+  //   player = document.getElementById("player" + (i2 + 1));
+  //   var playerInfo = document.createElement("div");
+  //   if (i2 + 1 == lastPlayer.length && spyOccupied == false) {
+  //     randomOccupationNum = 1;
+  //     randomOccupation = plats[randomOccupationNum];
+  //     playerInfo.textContent = randomOccupation;
+  //   } else if (spyOccupied == false) {
+  //     randomOccupationNum = Math.random() * (plats.length - 1) + 1;
+  //     randomOccupation = plats[parseInt(randomOccupationNum)];
+  //     if (parseInt(randomOccupationNum) == 1) {
+  //       spyOccupied = true;
+  //       //Dessa händer inte:
+  //       spyPlayer = "Random_Text4";
+  //       console.log("spionen är" + spyPlayer);
+  //       spyPlayer = players[i2];
+  //       //Inte dessa heller:
+  //       console.log("spionens siffra är" + i2);
+  //       console.log("spionen är" + spyPlayer);
+  //       playerInfo.textContent = randomOccupation;
+  //     } else {
+  //       playerInfo.textContent = randomOccupation + " : " + plats[0];
+  //     }
+  //     console.log("spionen är" + spyPlayer);
+  //   } else if (spyOccupied == true) {
+  //     randomOccupationNum = Math.random() * (plats.length - 2) + 2;
+  //     randomOccupation = plats[parseInt(randomOccupationNum)];
+  //     playerInfo.textContent = randomOccupation + " : " + plats[0];
+  //   }
+  //   playerInfo.setAttribute("class", "playerInfo");
+  //   playerInfo.style.display = "none";
+  //   player.appendChild(playerInfo);
+  //   playerCard = Math.random() * plats.length;
+  //   i2++;
+  // }
+}
+giveRoles();
+
 //styling for the player cards if less than 5
 if (playerAmount < 5) {
   playerContainer.style.width = "max-content";
@@ -213,23 +236,23 @@ playerContainer.onclick = function (event) {
 };
 
 //Navigation:
-let prevBtn = document.getElementById("prev-btn")
+let prevBtn = document.getElementById("prev-btn");
 
 //För GitHub:
-prevBtn.addEventListener("click", function(){
-    window.location.href = "/progressive-web-app-nr1/timer.html"
-})
-
-nextBtn.addEventListener("click", function(){
-  spyPlayerSave()
-  window.location.href = "/progressive-web-app-nr1/end.html"
-})
-
-//För dev-server:
 // prevBtn.addEventListener("click", function(){
-//     window.location.href = "/timer.html"
+//     window.location.href = "/progressive-web-app-nr1/timer.html"
 // })
 
 // nextBtn.addEventListener("click", function(){
-//   window.location.href = "/end.html"
+//   spyPlayerSave()
+//   window.location.href = "/progressive-web-app-nr1/end.html"
 // })
+
+//För dev-server:
+prevBtn.addEventListener("click", function () {
+  window.location.href = "/timer.html";
+});
+
+nextBtn.addEventListener("click", function () {
+  window.location.href = "/end.html";
+});

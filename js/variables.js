@@ -1,6 +1,6 @@
 var players = [];
-let i = 0;
 let newTimerValue = 0;
+let finalSpyValue = "";
 
 function saveTime() {
   localStorage.setItem("savedTime", timerValue);
@@ -11,6 +11,7 @@ function getSavedTime() {
 }
 
 function bengt() {
+  let i = 0;
   while (i < playerCount) {
     playerCountString = document.getElementById("input-" + (i + 1)).value;
     players[i] = playerCountString;
@@ -28,7 +29,6 @@ function spyPlayerSave() {
   localStorage.setItem("spyPlayerSaved", spyPlayer);
 }
 
-let finalSpyValue = "";
 //hämtar spyPlayerSaved
 function getSavedSpy() {
   finalSpyValue = localStorage.getItem("spyPlayerSaved");

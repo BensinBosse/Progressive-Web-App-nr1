@@ -62,7 +62,7 @@
           maxlength="6"
         />
       </form>
-      <button class="btn" id="more-btn" >
+      <button class="btn" id="more-btn">
         <img src="src\images\indexplus.svg" alt="" />
       </button>
     </main>
@@ -74,15 +74,18 @@
 
     <!--Ett trött försök till att få sw.js att fungera-->
     <script>
-      if("serviceWorker" in navigator){
-    navigator.serviceWorker.register("serviceWorker.js").then(registration => {
-        console.log("SW Registered");
-        console.log(registration);
-    }).catch(error => {
-        console.log("SW Registration Failed!");
-        console.log(error);
-    });
-}
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("serviceWorker.js")
+          .then((registration) => {
+            console.log("SW Registered");
+            console.log(registration);
+          })
+          .catch((error) => {
+            console.log("SW Registration Failed!");
+            console.log(error);
+          });
+      }
     </script>
     <script src="js/variables.js"></script>
     <script src="js/index.js"></script>

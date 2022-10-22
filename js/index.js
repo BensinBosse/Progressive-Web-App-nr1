@@ -5,20 +5,20 @@ var playerCountString = "input-" + playerCount;
 console.log(playerCountString);
 
 //navigation
-let nextBtn = document.getElementById("next-btn")
+let nextBtn = document.getElementById("next-btn");
 nextBtn.addEventListener("click", function nextPage() {
   bengt();
   console.log(players);
 
   // För GitHub:
-  window.location.href = "/progressive-web-app-nr1/timer.html";
+  // window.location.href = "/progressive-web-app-nr1/timer.html";
 
-  //För dev-server:
-  // window.location.href = "/timer.html";
-})
+  // För dev-server:
+  window.location.href = "/timer.html";
+});
 
-let addBtn = document.getElementById("more-btn")
-let removeBtn = document.getElementById("fewer-btn")
+let addBtn = document.getElementById("more-btn");
+let removeBtn = document.getElementById("fewer-btn");
 
 removeBtn.addEventListener("click", function removePlayer() {
   playerCount = document.getElementsByClassName("player-input").length;
@@ -29,14 +29,14 @@ removeBtn.addEventListener("click", function removePlayer() {
   if (playerCount <= 3) {
     return;
   }
-  playerCount = playerCount -1;
+  playerCount = playerCount - 1;
 
   playerBox.removeChild(playerBox.lastElementChild);
-})
+});
 
-let playerContainer = document.getElementById("player-box")
+let playerContainer = document.getElementById("player-box");
 function scrollBottom(element) {
-  element.scroll({ top: element.scrollHeight, behavior: "smooth"})
+  element.scroll({ top: element.scrollHeight, behavior: "smooth" });
 }
 
 addBtn.addEventListener("click", function addPlayer() {
@@ -48,13 +48,13 @@ addBtn.addEventListener("click", function addPlayer() {
   input.setAttribute("class", "player-input");
   input.setAttribute("id", "input-" + (playerCount + 1));
   input.setAttribute("placeholder", "Player " + (playerCount + 1) + " name");
-  input.setAttribute("Maxlength", "6")
+  input.setAttribute("Maxlength", "6");
 
   playerBox.appendChild(input);
 
   playerCount = document.getElementsByClassName("player-input").length;
   console.log(playerCount);
-  scrollBottom(playerContainer)
-})
+  scrollBottom(playerContainer);
+});
 
 scrollBottom(playerContainer);
