@@ -10,11 +10,11 @@ bigBtn.addEventListener("click", function () {
 });
 
 //För GitHub:
-// againBtn.addEventListener("click", function(){
-//   window.location.href = "/progressive-web-app-nr1/Index.html"
-// })
+againBtn.addEventListener("click", function(){
+  window.location.href = "/progressive-web-app-nr1/Index.html"
+})
 
 // För dev-server:
-againBtn.addEventListener("click", function () {
-  window.location.href = "/Index.html";
-});
+// againBtn.addEventListener("click", function () {
+//   window.location.href = "/Index.html";
+// });
