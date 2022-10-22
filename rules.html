@@ -10,8 +10,8 @@
 </head>
 <body>
 
+<h1>Welcome, normal person.</h1>
     <main>
-        <h1>Welcome, normal person.</h1>
         <h2>How to play: rules and scoring</h2>
         <h3>Game background:</h3>
         
@@ -48,37 +48,44 @@
             <li><strong>Vote must be unanimous to indict:</strong> the vote must be unanimous to indict the suspect: if any player votes no, the round continues as it was. Each person can only put a suspect up for vote once per round. Use it wisely!</li>
             <li><strong>Kenneth is indicted:</strong> if a player is indicted, they must reveal whether or not they are Kenneth and the round ends.</li>
         </ul>
-             \\'[;'
-        Kenneth guessing the location:
+        
+        <h3>Kenneth guessing the location:</h3>
+        <ul>
+            <li><strong>Kenneth guesses:</strong> at any time, Kenneth can reveal that they are Kenneth and make a guess at what the location is. The round immediately ends.</li>
+        </ul>
 
-            Kenneth guesses: at any time, Kenneth can reveal that they are Kenneth and make a guess at what the location is. The round immediately ends.
+        <h3>Round ends when:</h3>
+        <ul>
+            <li><strong> Indictment:</strong> group successfully indicts a player after voting <em>OR</em></li>
+            <li><strong>Kenneth guesses:</strong> Kenneth stops the round to make a guess about the location <em>OR</em></li>
+            <li><strong>No time left:</strong> clock runs out</li>
+        </ul>
+    
+        <div id="end-section">
+            <h3>Scoring and who wins:</h3>
+            <p><em>Kenneth Victory</em></p>
+            <ul>
+                <li>Kenneth earns <strong>2 points</strong> if no one is successfully indicted of being Kenneth</li>
+                <li>Kenneth earns <strong>4 points</strong> if a normal person (player) is successfully indicted of being Kenneth</li>
+                <li>Kenneth earns <strong>4 points</strong> if Kenneth stops the game and successfully guesses the location</li>
+            </ul>
 
-        Round ends when:
+            <p><em>Normal person Victory</em></p>
+            <ul>
+                <li>Each normal person (player) earns <strong>1 point</strong></li>
+                <li>The player who initiated the successful indictment of Kenneth earns <strong>2 points</strong> instead</li>
+            </ul>
 
-            Indictment: group successfully indicts a player after voting OR
-            Kenneth guesses: Kenneth stops the round to make a guess about the location OR
-            No time left: clock runs out
-
-        Scoring and who wins:
-        Kenneth Victory
-
-            Kenneth earns 2 points if no one is successfully indicted of being Kenneth
-            Kenneth earns 4 points if a normal person (player) is successfully indicted of being Kenneth
-            Kenneth earns 4 points if Kenneth stops the game and successfully guesses the location
-
-        Non-Kenneth Victory
-
-            Each normal person (player) earns 1 point
-            The player who initiated the successful indictment of Kenneth earns 2 points instead
-
-        Running total:
-
-            You can play for as many rounds as you'd like.
+            <p><em>Running total:</em></p>
+            <ul>
+                <li>You can play for as many rounds as you'd like.</li>
+            </ul>
+        </div>
     </main>
 
     <!-- Navigation -->
     <div class="nav-buttons">
-        <button id="rules-btn" class="btn">GO BACK</button>
+        <button id="prev-btn" class="btn">GO BACK</button>
         <button id="next-btn" class="btn">NEXT</button>
       </div>
     <script src="js/rules.js"></script>
