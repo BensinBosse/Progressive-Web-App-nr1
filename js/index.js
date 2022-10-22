@@ -59,10 +59,10 @@ nextBtn.addEventListener("click", function nextPage() {
   console.log(players);
 
   // För GitHub:
-  // window.location.href = "/progressive-web-app-nr1/timer.html";
+  window.location.href = "/progressive-web-app-nr1/timer.html";
 
   // För dev-server:
-  window.location.href = "/timer.html";
+  // window.location.href = "/timer.html";
 });
 
 let rulesBtn = document.getElementById("rules-btn");
