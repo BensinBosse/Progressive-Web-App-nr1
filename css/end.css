@@ -6,7 +6,7 @@
   padding: 1%;
   font-size: 10vw;
   width: 75vw;
-  height: 20vw;
+  height: 30vw;
   cursor: pointer;
   z-index: 1;
 }
@@ -19,7 +19,7 @@
   transform: translate(-50%, -50%);
   font-size: 10vw;
   width: 75vw;
-  height: 20vw;
+  height: 30vw;
   align-items: center;
   margin: 0 auto;
   justify-content: center;
