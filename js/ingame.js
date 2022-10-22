@@ -70,6 +70,10 @@ function giveRoles() {
   playerSpy.removeChild(playerSpy.firstElementChild);
   console.log(" hej", playerSpy.children);
 
+  //Förlåt va tvungen att testa lite, och det funka... XD
+  spyPlayer = playerSpy.textContent
+  spyPlayerSave()
+
   SpyName = "hej";
   playerSpy.innerHTML +=
     '<div class="playerInfo" style="display: none;">You are the Spy!!!</div>';
@@ -138,14 +142,15 @@ const timerMinutes = document.getElementById("timer-minutes");
 const colon = document.getElementById("colon");
 let onVar = false;
 let finishedVar = false;
-let seconds = 0;
+let seconds = 2;
 let countdown;
 timerSeconds.textContent = seconds;
 colon.textContent = ":0";
 
 //function for timer
 getSavedTime();
-let minutes = newTimerValue;
+let minutes = 0
+//let minutes = newTimerValue;
 timerMinutes.textContent = minutes;
 const nextBtn = document.getElementById("next-btn");
 
