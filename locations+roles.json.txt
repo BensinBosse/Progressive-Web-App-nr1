@@ -11,19 +11,21 @@ Du får använda de du vill (men du får ju gärna behålla dom jag gjorde :D)
             "Matsalsknegare",
             "EPA-drägg",
             "Aina",
-            "The BigMac&Co-guest",
-            "The Karen"
+            "The "BigMac&Co"-guest",
+            "Karen"
+            "Fyllo"
         ]
     }, {
         "title": "TC-Stenungsund",
         "roles": [
             "The matlådor-god Ronnie",
-            "The Nigglas",
+            "Nigglas",
             "Just Fors",
             "Hogia-Axel",
             "Traitor-Lext",
             "Dread-Jonas",
             "Bike-Elvis"
+            "Rektorn"
         ]
     }, {
         "title": "22TE4I",

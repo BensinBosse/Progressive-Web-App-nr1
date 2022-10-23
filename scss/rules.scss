@@ -15,7 +15,7 @@ body {
 
 main {
     display: flex;
-    width: 50vw;
+    width: 55vw;
     height: max-content;
     margin: 0 auto;
     margin-bottom: 1em;
@@ -41,6 +41,7 @@ h2 {
 
 h3 {
     margin: 3em 0 0;
+    color: $aquamarine;
 }
 
 li {
@@ -49,4 +50,12 @@ li {
 
 li:first-of-type {
     margin: 0;
+}
+
+strong {
+    color:$opera-mauve;
+}
+
+p {
+    margin: 0.5em;
 }
