@@ -20,24 +20,24 @@ increaseBtn.addEventListener("click", function increaseTime() {
   }
 });
 
-//För GitHub:
-prevBtn.addEventListener("click", function () {
-  saveTime();
-  window.location.href = "/progressive-web-app-nr1/Index.html";
-});
+if (dev == true) {
+  prevBtn.addEventListener("click", function () {
+    saveTime();
+    window.location.href = "/Index.html";
+  });
 
-nextBtn.addEventListener("click", function () {
-  saveTime();
-  window.location.href = "/progressive-web-app-nr1/ingame.html";
-});
+  nextBtn.addEventListener("click", function () {
+    saveTime();
+    window.location.href = "/ingame.html";
+  });
+} else {
+  prevBtn.addEventListener("click", function () {
+    saveTime();
+    window.location.href = "/progressive-web-app-nr1/Index.html";
+  });
 
-//För dev-server:
-// prevBtn.addEventListener("click", function () {
-//   saveTime();
-//   window.location.href = "/Index.html";
-// });
-
-// nextBtn.addEventListener("click", function () {
-//   saveTime();
-//   window.location.href = "/ingame.html";
-// });
+  nextBtn.addEventListener("click", function () {
+    saveTime();
+    window.location.href = "/progressive-web-app-nr1/ingame.html";
+  });
+}

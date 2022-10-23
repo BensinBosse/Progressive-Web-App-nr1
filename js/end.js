@@ -9,12 +9,13 @@ bigBtn.addEventListener("click", function () {
   againBtn.style.visibility = "visible";
 });
 
-//För GitHub:
-againBtn.addEventListener("click", function(){
-  window.location.href = "/progressive-web-app-nr1/Index.html"
-})
-
-// För dev-server:
-// againBtn.addEventListener("click", function () {
-//   window.location.href = "/Index.html";
-// });
+// För dev-server eller git. ändra i variables.js:
+if (dev == true) {
+  againBtn.addEventListener("click", function () {
+    window.location.href = "/Index.html";
+  });
+} else {
+  againBtn.addEventListener("click", function () {
+    window.location.href = "/progressive-web-app-nr1/Index.html";
+  });
+}

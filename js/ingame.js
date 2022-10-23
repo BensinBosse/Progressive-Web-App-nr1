@@ -47,7 +47,7 @@ function giveRoles() {
   //VIKTIGT! DU FÅR INTE ÄNDRA HÄR FÖR JAG EXPERIMENTERAR MED NYA LÖSNINGAR FÖR ATT GÖRA DET LÄTTARE FÖR BÅDE DIG OCH MIG:
 
   i = 1;
-  let randomNumber = Math.random() * locations.length - 1;
+  let randomNumber = Math.random() * locations.length;
   console.log(locations.length);
   let MapNumber = parseInt(randomNumber);
   const Map = locations[MapNumber];
@@ -71,8 +71,8 @@ function giveRoles() {
   console.log(" hej", playerSpy.children);
 
   //Förlåt va tvungen att testa lite, och det funka... XD
-  spyPlayer = playerSpy.textContent
-  spyPlayerSave()
+  spyPlayer = playerSpy.textContent;
+  spyPlayerSave();
 
   SpyName = "hej";
   playerSpy.innerHTML +=
@@ -242,21 +242,22 @@ playerContainer.onclick = function (event) {
 //Navigation:
 let prevBtn = document.getElementById("prev-btn");
 
-//För GitHub:
-prevBtn.addEventListener("click", function(){
-    window.location.href = "/progressive-web-app-nr1/timer.html"
-})
+//För dev-server eller git. ändra i variables.js:
+if (dev == true) {
+  prevBtn.addEventListener("click", function () {
+    window.location.href = "/timer.html";
+  });
 
-nextBtn.addEventListener("click", function(){
-  spyPlayerSave()
-  window.location.href = "/progressive-web-app-nr1/end.html"
-})
+  nextBtn.addEventListener("click", function () {
+    window.location.href = "/end.html";
+  });
+} else {
+  prevBtn.addEventListener("click", function () {
+    window.location.href = "/progressive-web-app-nr1/timer.html";
+  });
 
-//För dev-server:
-// prevBtn.addEventListener("click", function () {
-//   window.location.href = "/timer.html";
-// });
-
-// nextBtn.addEventListener("click", function () {
-//   window.location.href = "/end.html";
-// });
+  nextBtn.addEventListener("click", function () {
+    spyPlayerSave();
+    window.location.href = "/progressive-web-app-nr1/end.html";
+  });
+}

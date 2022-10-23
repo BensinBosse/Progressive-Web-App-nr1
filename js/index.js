@@ -21,11 +21,11 @@ removeBtn.addEventListener("click", function removePlayer() {
   playerBox.removeChild(playerBox.lastElementChild);
   scrollBottom(playerContainer);
 
-  scrollCheck()
+  scrollCheck();
 });
 
 let playerContainer = document.getElementById("player-box");
-playerContainer.style.justifyContent = 'space-around';
+playerContainer.style.justifyContent = "space-around";
 function scrollBottom(element) {
   element.scroll({ top: element.scrollHeight, behavior: "smooth" });
 }
@@ -47,7 +47,7 @@ addBtn.addEventListener("click", function addPlayer() {
   console.log(playerCount);
   scrollBottom(playerContainer);
 
-  scrollCheck()
+  scrollCheck();
 });
 
 scrollBottom(playerContainer);
@@ -57,31 +57,30 @@ let nextBtn = document.getElementById("next-btn");
 nextBtn.addEventListener("click", function nextPage() {
   bengt();
   console.log(players);
-
-  // För GitHub:
-  window.location.href = "/progressive-web-app-nr1/timer.html";
-
-  // För dev-server:
-  // window.location.href = "/timer.html";
+  if (dev == true) {
+    window.location.href = "/timer.html";
+  } else {
+    window.location.href = "/progressive-web-app-nr1/timer.html";
+  }
 });
 
 let rulesBtn = document.getElementById("rules-btn");
-  rulesBtn.addEventListener("click", function(){
-  // För GitHub:
-  window.location.href = "/progressive-web-app-nr1/rules.html";
-
-  // För dev-server:
-  // window.location.href = "/rules.html";
-})
+rulesBtn.addEventListener("click", function () {
+  if (dev == true) {
+    window.location.href = "/rules.html";
+  } else {
+    window.location.href = "/progressive-web-app-nr1/rules.html";
+  }
+});
 
 //Sätter justify-content: space-around på playerContainer,
 //bara sålänge den inte overflowar
 function scrollCheck() {
   if (playerContainer.scrollHeight > playerContainer.clientHeight) {
-    playerContainer.style.justifyContent = '';
-    console.log("scroll")
+    playerContainer.style.justifyContent = "";
+    console.log("scroll");
   } else {
-    playerContainer.style.justifyContent = 'space-around';
-    console.log("space")
+    playerContainer.style.justifyContent = "space-around";
+    console.log("space");
   }
 }
