@@ -81,24 +81,18 @@
 
     <!--Ett trött försök till att få sw.js att fungera-->
     <script>
-      import { createServiceWorkerScript } from "@jsenv/pwa";
-      const script = createServiceWorkerScript();
-      script.setRegistrationPromise(
-        window.navigator.register("/service_worker.js")
-      );
-
-      // if ("serviceWorker" in navigator) {
-      //   navigator.serviceWorker
-      //     .register("serviceWorker.js")
-      //     .then((registration) => {
-      //       console.log("SW Registered");
-      //       console.log(registration);
-      //     })
-      //     .catch((error) => {
-      //       console.log("SW Registration Failed!");
-      //       console.log(error);
-      //     });
-      // }
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("serviceWorker.js")
+          .then((registration) => {
+            console.log("SW Registered");
+            console.log(registration);
+          })
+          .catch((error) => {
+            console.log("SW Registration Failed!");
+            console.log(error);
+          });
+      }
     </script>
     <script src="js/variables.js"></script>
     <script src="js/index.js"></script>
