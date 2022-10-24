@@ -49,7 +49,6 @@ function giveRoles() {
   randomNumber = parseInt(Math.random() * (i - 1) + 1);
   playerSpy = document.getElementById("player" + randomNumber);
   playerSpy.removeChild(playerSpy.firstElementChild);
-  console.log(" hej", playerSpy.children);
 
   //Förlåt va tvungen att testa lite, och det funka... XD
   spyPlayer = playerSpy.textContent;
