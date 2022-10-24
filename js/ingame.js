@@ -12,7 +12,6 @@ while (i < playerAmount) {
   playerCard.setAttribute("class", "item");
   playerCard.setAttribute("id", "player" + i);
   playerCard.insertAdjacentText("beforeend", playerArr[i - 1]);
-
   playerContainer.appendChild(playerCard);
 }
 

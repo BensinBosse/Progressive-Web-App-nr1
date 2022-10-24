@@ -64,6 +64,9 @@ h1 {
   .nav-buttons {
     width: 140vw;
   }
+  h1 {
+    margin-top: -4rem;
+  }
 }
 
 /*# sourceMappingURL=timer.css.map */
