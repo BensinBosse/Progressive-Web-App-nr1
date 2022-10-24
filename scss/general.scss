@@ -41,8 +41,24 @@ h1 {
 }
 
 #prev-btn,
-#rules-btn{
+#rules-btn {
   background-color: $opera-mauve;
+}
+
+#prev-btn,
+#rules-btn,
+#next-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16vw;
+  height: auto;
+}
+
+#prev-btn,
+#rules-btn,
+#next-btn {
+  font-size: 2vw;
 }
 
 .nav-buttons {
@@ -87,7 +103,7 @@ h1 {
 
 @media screen and (max-width: 850px) {
   .nav-buttons {
-    width: 150vw;
+    width: 140vw;
   }
 }
 

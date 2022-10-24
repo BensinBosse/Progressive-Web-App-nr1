@@ -37,6 +37,7 @@ body {
   border-radius: 50%;
   //box-shadow: 0px 2px 10px black;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 //for users with a mouse cursor
@@ -74,10 +75,17 @@ p {
     z-index: 1000;
     box-shadow: 0px 2px 10px black;
     overflow: hidden;
+    line-height: 2em;
+
 
     //transition animation
     transition: width 0.25s, height 0.25s, margin 0.25s, box-shadow 0.25s;
 
+}
+
+.playerInfo {
+  font-weight: 100;
+  line-height: 1em;
 }
 
 .scroll-shadows {
@@ -102,4 +110,3 @@ p {
 #next-btn {
   visibility: hidden;
 }
-

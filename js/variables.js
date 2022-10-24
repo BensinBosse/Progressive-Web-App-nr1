@@ -2,6 +2,9 @@ var players = [];
 let newTimerValue = 0;
 let finalSpyValue = "";
 
+//ändra denna och sw för att få allt att funka :) hoppas jag
+let dev = false;
+
 function saveTime() {
   localStorage.setItem("savedTime", timerValue);
 }

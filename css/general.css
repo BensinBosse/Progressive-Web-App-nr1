@@ -36,6 +36,22 @@ h1 {
   background-color: #af7595;
 }
 
+#prev-btn,
+#rules-btn,
+#next-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16vw;
+  height: auto;
+}
+
+#prev-btn,
+#rules-btn,
+#next-btn {
+  font-size: 2vw;
+}
+
 .nav-buttons {
   left: 50%;
   top: 90%;
@@ -76,7 +92,7 @@ h1 {
 }
 @media screen and (max-width: 850px) {
   .nav-buttons {
-    width: 150vw;
+    width: 140vw;
   }
 }
 @media screen and (orientation: portrait) {
