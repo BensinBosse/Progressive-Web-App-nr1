@@ -59,3 +59,15 @@ strong {
 p {
     margin: 0.5em;
 }
+
+#prev-btn {
+    width: 6vw;
+    height: 4.5vw;
+}
+
+#prev-btn img {
+    aspect-ratio: 1 / 1;
+    width: 2vw;
+    height: 2vw;
+    display: block;
+}
