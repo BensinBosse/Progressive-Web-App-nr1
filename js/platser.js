@@ -227,4 +227,29 @@ const locations = [
       "Pontus som försöker att överleva ett nattskift",
     ],
   },
+  {
+    name: "TC-Stenungsund",
+    roles: [
+      "The matlådor-god Ronnie",
+      "Nigglas",
+      "Just Fors",
+      "Hogia-Axel",
+      "Traitor-Lext",
+      "Dread-Jonas",
+      "Bike-Elvis",
+      "Rektorn",
+    ],
+  },
+  {
+    name: "22TE4I",
+    roles: [
+      "Pontus",
+      "Kalle",
+      "Alex",
+      "Nicolas",
+      "Lina",
+      "William",
+      "Anton",
+    ]
+  },
 ];
