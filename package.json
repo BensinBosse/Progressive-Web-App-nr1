@@ -5,7 +5,6 @@
     "all": "npm-run-all --parallel dev:*"
   },
   "dependencies": {
-    "@jsenv/pwa": "^5.0.0",
     "bootstrap": "^5.2.2"
   },
   "devDependencies": {
