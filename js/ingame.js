@@ -4,32 +4,6 @@ let playerArr = players.split(",");
 playerAmount = playerArr.length;
 let i = 0;
 
-const locations = [
-  {
-    name: "Skola",
-    roles: [
-      "lärare",
-      "elev",
-      "kenneth",
-      "något mer",
-      "ronnie",
-      "cisco",
-      "fasdfasdfasdfasdfasdfasdfasdffsgd",
-    ],
-  },
-  {
-    name: "Donken",
-    roles: [
-      "burgaren",
-      "kock",
-      "kund",
-      "alexdonkenpoäng",
-      "raggarsvin",
-      "fyllo",
-    ],
-  },
-];
-
 while (i < playerAmount) {
   i++;
   var playerContainer = document.getElementById("container");
@@ -48,20 +22,27 @@ function giveRoles() {
 
   i = 1;
   let randomNumber = Math.random() * locations.length;
-  console.log(locations.length);
-  let MapNumber = parseInt(randomNumber);
-  const Map = locations[MapNumber];
+  let intNumber = parseInt(randomNumber);
+  const currentMap = locations[intNumber];
+  const rolesSave = [...currentMap.roles];
 
   for (let playerInfo in playerArr) {
-    randomNumber = Math.random() * Map.roles.length;
-    playerInfo = Map.roles[parseInt(randomNumber)];
+    randomNumber = Math.random() * currentMap.roles.length;
+    intNumber = parseInt(randomNumber);
+    playerInfo = currentMap.roles[intNumber];
 
     let player = document.getElementById("player" + i);
     var playerOccupation = document.createElement("div");
-    playerOccupation.textContent = Map.name + " : " + playerInfo;
+    playerOccupation.textContent = currentMap.name + " : " + playerInfo;
     playerOccupation.setAttribute("class", "playerInfo");
     playerOccupation.style.display = "none";
     player.appendChild(playerOccupation);
+
+    if (currentMap.roles.length > 1) {
+      currentMap.roles.splice(intNumber, 1);
+    } else {
+      currentMap.roles = [...rolesSave];
+    }
     i++;
   }
 
@@ -76,57 +57,12 @@ function giveRoles() {
 
   SpyName = "hej";
   playerSpy.innerHTML +=
-    '<div class="playerInfo" style="display: none;">KENNETH</div>';
+    '<div class="playerInfo" style="display: none;">Du är KENNETH, Låt ingen veta!</div>';
 
-  console.log(Map.name);
+  console.log(currentMap.name);
 
   //DET GÄLLER TILL HIT
   //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-  // i2 = 0;
-  // let spyOccupied = false;
-  // //Denna är den sista som går igenom:
-  // spyPlayer = "Random_Text2";
-  // let randomOccupationNum = 0;
-  // let randomOccupation;
-  // let plats = maps[parseInt(Math.random() * 2)];
-  // let lastPlayer = document.getElementsByClassName("item");
-  // let player = document.getElementById("player1");
-  // while (i2 < lastPlayer.length) {
-  //   player = document.getElementById("player" + (i2 + 1));
-  //   var playerInfo = document.createElement("div");
-  //   if (i2 + 1 == lastPlayer.length && spyOccupied == false) {
-  //     randomOccupationNum = 1;
-  //     randomOccupation = plats[randomOccupationNum];
-  //     playerInfo.textContent = randomOccupation;
-  //   } else if (spyOccupied == false) {
-  //     randomOccupationNum = Math.random() * (plats.length - 1) + 1;
-  //     randomOccupation = plats[parseInt(randomOccupationNum)];
-  //     if (parseInt(randomOccupationNum) == 1) {
-  //       spyOccupied = true;
-  //       //Dessa händer inte:
-  //       spyPlayer = "Random_Text4";
-  //       console.log("spionen är" + spyPlayer);
-  //       spyPlayer = players[i2];
-  //       //Inte dessa heller:
-  //       console.log("spionens siffra är" + i2);
-  //       console.log("spionen är" + spyPlayer);
-  //       playerInfo.textContent = randomOccupation;
-  //     } else {
-  //       playerInfo.textContent = randomOccupation + " : " + plats[0];
-  //     }
-  //     console.log("spionen är" + spyPlayer);
-  //   } else if (spyOccupied == true) {
-  //     randomOccupationNum = Math.random() * (plats.length - 2) + 2;
-  //     randomOccupation = plats[parseInt(randomOccupationNum)];
-  //     playerInfo.textContent = randomOccupation + " : " + plats[0];
-  //   }
-  //   playerInfo.setAttribute("class", "playerInfo");
-  //   playerInfo.style.display = "none";
-  //   player.appendChild(playerInfo);
-  //   playerCard = Math.random() * plats.length;
-  //   i2++;
-  // }
 }
 giveRoles();
 
