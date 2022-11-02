@@ -55,7 +55,7 @@ function giveRoles() {
 
   SpyName = "hej";
   playerSpy.innerHTML +=
-    '<div class="playerInfo" style="display: none;">Du är KENNETH, Låt ingen veta!</div>';
+    '<div class="playerInfo" style="display: none;">KENNETH!</div>';
 
   console.log(currentMap.name);
 
