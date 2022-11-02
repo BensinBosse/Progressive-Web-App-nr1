@@ -40,7 +40,10 @@ body {
 }
 
 //for users with a mouse cursor
-.item:hover {
+.item:hover,
+.item:focus,
+.item:active {
+  background-color: $pale-cerulean;
     box-shadow: 0px 2px 10px black;
 }
 
